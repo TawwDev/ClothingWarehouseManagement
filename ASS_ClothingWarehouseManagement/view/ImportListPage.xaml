@@ -1,0 +1,116 @@
+﻿<Page x:Class="ASS_ClothingWarehouseManagement.view.ImportListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ImportListPage">
+
+    <Grid Grid.Column="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Filter Panel -->
+        <Border Grid.Column="0" Background="White" CornerRadius="5" Padding="15" Margin="0,0,10,0">
+            <StackPanel>
+                <Label Content="Nhà cung cấp" FontWeight="SemiBold"/>
+                <ComboBox Margin="0,5,0,10">
+                    <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
+                    <ComboBoxItem>Công Ty TNHH Thế Giới Di Động</ComboBoxItem>
+                    <ComboBoxItem>Công Ty Samsung Việt Nam</ComboBoxItem>
+                    <!-- Thêm các nhà cung cấp khác ở đây -->
+                </ComboBox>
+
+                <Label Content="Nhân viên nhập" FontWeight="SemiBold"/>
+                <ComboBox Margin="0,5,0,10">
+                    <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
+                    <ComboBoxItem>Trần Nhật Sinh</ComboBoxItem>
+                    <!-- Thêm các nhân viên khác ở đây -->
+                </ComboBox>
+
+                <Label Content="Từ ngày" FontWeight="SemiBold"/>
+                <DatePicker Margin="0,5,0,10"/>
+
+                <Label Content="Đến ngày" FontWeight="SemiBold"/>
+                <DatePicker Margin="0,5,0,10"/>
+
+                <Label Content="Từ số tiền (VND)" FontWeight="SemiBold"/>
+                <TextBox Margin="0,5,0,10"/>
+
+                <Label Content="Đến số tiền (VND)" FontWeight="SemiBold"/>
+                <TextBox Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Right Content Panel -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Top Action Buttons -->
+            <Border Grid.Row="0" Background="White" CornerRadius="5" Padding="10">
+                <StackPanel Orientation="Horizontal">
+                    <!-- Các nút hành động thay thế cho icon -->
+                    <Button Content="THÊM" />
+                    <Button Content="CHI TIẾT" />
+                    <Button Content="HUỶ PHIẾU" />
+                    
+                </StackPanel>
+            </Border>
+
+            <!-- Search and Filter Bar -->
+            <Border Grid.Row="1" Background="White" CornerRadius="5" Padding="10" Margin="0,10,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <ComboBox VerticalAlignment="Center" MinWidth="120">
+                            <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Text="Nhập nội dung tìm kiếm..." Foreground="Gray" VerticalAlignment="Center" MinWidth="250" Margin="10,0" Padding="5"/>
+                    </StackPanel>
+
+                    <Button Grid.Column="1" Content="Làm mới" VerticalAlignment="Center" Padding="10,5"/>
+                </Grid>
+            </Border>
+
+            <!-- Data Grid -->
+            <DataGrid Grid.Row="2" 
+                      Margin="0,10,0,0" 
+                      AutoGenerateColumns="False" 
+                      IsReadOnly="True"
+                      AlternatingRowBackground="#f9f9f9"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      Background="White"
+                      BorderThickness="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="STT" Binding="{Binding STT}" Width="50"/>
+                    <DataGridTextColumn Header="Mã phiếu nh..." Binding="{Binding MaPhieu}" Width="120"/>
+                    <DataGridTextColumn Header="Nhà cung cấp" Binding="{Binding NhaCungCap}" Width="*"/>
+                    <DataGridTextColumn Header="Nhân viên nhập" Binding="{Binding NhanVienNhap}" Width="*"/>
+                    <DataGridTextColumn Header="Thời gian" Binding="{Binding ThoiGian}" Width="*"/>
+                    <DataGridTextColumn Header="Tổng tiền" Binding="{Binding TongTien, StringFormat={}{0:N0}đ}" Width="*">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Right"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+                <!-- Dữ liệu mẫu sẽ được binding từ code-behind hoặc ViewModel -->
+            </DataGrid>
+
+        </Grid>
+    </Grid>
+</Page>

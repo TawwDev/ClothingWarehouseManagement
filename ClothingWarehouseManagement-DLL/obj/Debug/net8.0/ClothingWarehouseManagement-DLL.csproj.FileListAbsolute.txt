@@ -1,0 +1,15 @@
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\bin\Debug\net8.0\ClothingWarehouseManagement-DLL.deps.json
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\bin\Debug\net8.0\ClothingWarehouseManagement-DLL.dll
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\bin\Debug\net8.0\ClothingWarehouseManagement-DLL.pdb
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\bin\Debug\net8.0\ClothingWarehouseManagement-DAL.dll
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\bin\Debug\net8.0\ClothingWarehouseManagement-DAL.pdb
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.csproj.AssemblyReference.cache
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.AssemblyInfoInputs.cache
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.AssemblyInfo.cs
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.csproj.CoreCompileInputs.cache
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\Clothing.F5966395.Up2Date
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.dll
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\refint\ClothingWarehouseManagement-DLL.dll
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ClothingWarehouseManagement-DLL.pdb
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DLL\obj\Debug\net8.0\ref\ClothingWarehouseManagement-DLL.dll

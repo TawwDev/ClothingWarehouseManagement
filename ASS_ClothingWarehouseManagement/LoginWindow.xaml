@@ -1,0 +1,62 @@
+﻿<Window x:Class="ASS_ClothingWarehouseManagement.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center">
+
+
+            <TextBlock Text="Login" 
+                   FontSize="40" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,10"
+                   Foreground="#333333"/>
+
+            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Height="200">
+                <Border CornerRadius="8" Background="White">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="15" 
+                  ShadowDepth="1" 
+                  Direction="315" 
+                  Color="Black" 
+                  Opacity="0.7"/>
+                    </Border.Effect>
+                </Border>
+
+
+                <Border CornerRadius="8" Background="White" ClipToBounds="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3.5*"/>
+                            <RowDefinition Height="3.5*"/>
+                            <RowDefinition Height="2.5*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel VerticalAlignment="Center">
+                            <Label Content="User Name" Margin="20, 0, 0, 0"/>
+                            <TextBox x:Name="tbUserName" Width="350" Height="30" />
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" >
+                            <Label Content="Pass Word" Margin="20, 0, 0, 0"/>
+                            <PasswordBox x:Name="pbPassWord" Width="350" Height="30" />
+                        </StackPanel>
+                        <Grid Grid.Row="2" VerticalAlignment="Top">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="btnLogin" Content="Login" Width="100" Height="30" HorizontalAlignment="Right" Margin="0, 0, 20, 0" Click="btnLogin_Click"/>
+                            <Button x:Name="btnExit" Grid.Column="1" Width="100" Height="30" HorizontalAlignment="Left" Content="Exit" Margin="20, 0, 0, 0" Click="btnExit_Click"/>
+                        </Grid>
+                    </Grid>
+                </Border>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+
+</Window>
