@@ -30,4 +30,17 @@ public partial class Product
     public virtual ICollection<ExportReceiptDetail> ExportReceiptDetails { get; set; } = new List<ExportReceiptDetail>();
 
     public virtual ICollection<ImportReceiptDetail> ImportReceiptDetails { get; set; } = new List<ImportReceiptDetail>();
+
+    public Product(string? productName, int categoryId, int quantity, string size, string? color, string? material, double price, string? brand, int? status)
+    {
+        ProductName = productName;
+        CategoryId = categoryId;
+        Quantity = quantity;
+        Size = size;
+        Color = color;
+        Material = material;
+        Price = price;
+        Brand = brand;
+        Status = status;
+    }
 }

@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
+      Loaded="Page_Loaded"
       Title="ProductListPage">
 
     <Grid Margin="15" Grid.Column="1">
@@ -26,7 +27,7 @@
 
                     <!-- Left Action Buttons -->
                     <StackPanel Grid.Column="0" Orientation="Horizontal">
-                        <Button Content="Add" Padding="10, 0, 10, 0" />
+                        <Button Content="Add" Padding="10, 0, 10, 0" Click="Button_Click"/>
                         <Button Content="Edit" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
                         <Button Content="Delete" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
                         <Button Content="View" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
@@ -34,25 +35,23 @@
 
                     <!-- Right Search/Filter Area -->
                     <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
-                        <ComboBox MinWidth="120" Padding="5">
-                            <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
-                            <ComboBoxItem>Apple</ComboBoxItem>
-                            <ComboBoxItem>Samsung</ComboBoxItem>
-                            <ComboBoxItem>Vivo</ComboBoxItem>
+                        <ComboBox x:Name="cbCategory" MinWidth="170" Padding="5" SelectionChanged="cbCategory_SelectionChanged" >
                         </ComboBox>
-                        <TextBox Text="Nhập nội dung tìm kiếm..." 
+                        <TextBox Text="" 
+                                 x:Name="tbSearchKeyWord"
                                  Foreground="Gray" 
                                  MinWidth="250" 
                                  Margin="10,0" 
                                  Padding="5"
                                  VerticalContentAlignment="Center"/>
-                        <Button Content="Làm mới" Padding="10,5"/>
+                        <Button x:Name="btnSearch" Content="Search" Padding="10,5" Click="btnSearch_Click"/>
                     </StackPanel>
                 </Grid>
 
                 <!-- Data Grid for Product List -->
                 <DataGrid Grid.Row="1"
-                          x:Name="ProductDataGrid"
+                          x:Name="dgProduct"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           AutoGenerateColumns="False"
                           IsReadOnly="True"
                           AlternatingRowBackground="#f9f9f9"
@@ -60,21 +59,20 @@
                           HeadersVisibility="Column"
                           GridLinesVisibility="Horizontal"
                           HorizontalGridLinesBrush="#e0e0e0"
-                          BorderThickness="0">
+                          BorderThickness="0"
+                          SelectionChanged="dgProduct_SelectionChanged"
+                          >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Mã SP" Binding="{Binding ProductId}" Width="60"/>
-                        <DataGridTextColumn Header="Tên sản phẩm" Binding="{Binding ProductName}" Width="2*"/>
-                        <DataGridTextColumn Header="Số lượng tồn" Binding="{Binding StockQuantity}" Width="*"/>
-                        <DataGridTextColumn Header="Thương hiệu" Binding="{Binding Brand}" Width="*"/>
-                        <DataGridTextColumn Header="Hệ điều hành" Binding="{Binding OperatingSystem}" Width="*"/>
-                        <DataGridTextColumn Header="Kích thước màn" Binding="{Binding ScreenSize}" Width="*"/>
-                        <DataGridTextColumn Header="Chip xử lý" Binding="{Binding Processor}" Width="1.5*"/>
-                        <DataGridTextColumn Header="Dung lượng pin" Binding="{Binding BatteryCapacity}" Width="*"/>
-                        <DataGridTextColumn Header="Xuất xứ" Binding="{Binding Origin}" Width="*"/>
-                        <DataGridTextColumn Header="Khu vực kho" Binding="{Binding WarehouseLocation}" Width="*"/>
+                        <DataGridTextColumn Header="Code" Binding="{Binding ProductId}" Width="50"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding ProductName}" Width="2*"/>
+                        <DataGridTextColumn Header="Unit Price" Binding="{Binding Price}" Width="*"/>
+                        <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="60"/>
+                        <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="1.3*"/>
+                        <DataGridTextColumn Header="Material" Binding="{Binding Material}" Width="*"/>
+                        <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="70"/>
+                        <DataGridTextColumn Header="Color" Binding="{Binding Color}" Width="*"/>
+                        <DataGridTextColumn Header="Category" Binding="{Binding Category.CategoryName}" Width="*"/>
                     </DataGrid.Columns>
-
-                    <!-- Dữ liệu mẫu sẽ được thêm vào từ code-behind hoặc ViewModel -->
 
                 </DataGrid>
             </Grid>

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded"
-        Title="MainWindow" Height="600" Width="1100">
+        Title="MainWindow" Height="700" Width="1500">
     <Grid Background="#f0f2f5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="31*"/>
