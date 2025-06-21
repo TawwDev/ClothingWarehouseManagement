@@ -27,10 +27,9 @@
 
                     <!-- Left Action Buttons -->
                     <StackPanel Grid.Column="0" Orientation="Horizontal">
-                        <Button Content="Add" Padding="10, 0, 10, 0" Click="Button_Click"/>
-                        <Button Content="Edit" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
-                        <Button Content="Delete" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
-                        <Button Content="View" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"/>
+                        <Button x:Name="btnAddProduct" Content="Add" Padding="10, 0, 10, 0" Click="btnAddProduct_Click"/>
+                        <Button x:Name="btnEditProduct" Content="Edit" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnEditProduct_Click"/>
+                        <Button x:Name="btnDeleteProduct" Content="Delete" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnDeleteProduct_Click"/>
                     </StackPanel>
 
                     <!-- Right Search/Filter Area -->
@@ -72,6 +71,7 @@
                         <DataGridTextColumn Header="Size" Binding="{Binding Size}" Width="70"/>
                         <DataGridTextColumn Header="Color" Binding="{Binding Color}" Width="*"/>
                         <DataGridTextColumn Header="Category" Binding="{Binding Category.CategoryName}" Width="*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="45"/>
                     </DataGrid.Columns>
 
                 </DataGrid>

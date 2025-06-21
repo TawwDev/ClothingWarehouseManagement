@@ -11,6 +11,9 @@
     <Compile Update="LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UpdateProductWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\ExportListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

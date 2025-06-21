@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\App.xaml
-91044493276
+101465964190
 
-14672485132
+151902642543
 235-487364629
-AddImport.xaml;AddProductWindow.xaml;LoginWindow.xaml;MainWindow.xaml;view\ExportListPage.xaml;view\ImportListPage.xaml;view\ProductListPage.xaml;view\StatisticsListPage.xaml;view\SupplierListPage.xaml;
+AddImport.xaml;AddProductWindow.xaml;LoginWindow.xaml;MainWindow.xaml;UpdateProductWindow.xaml;view\ExportListPage.xaml;view\ImportListPage.xaml;view\ProductListPage.xaml;view\StatisticsListPage.xaml;view\SupplierListPage.xaml;
 
 True
 

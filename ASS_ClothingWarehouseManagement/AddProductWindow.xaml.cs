@@ -38,29 +38,29 @@ namespace ASS_ClothingWarehouseManagement
         {
             if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbColor.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
             {
-                MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK,
-                        MessageBoxImage.Warning);
+                MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             if (cbCategory.SelectedItem == null)
             {
-                MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK,
-                        MessageBoxImage.Warning);
+                MessageBox.Show("Please select a category.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             double price;
-            bool isPriceNumeric = double.TryParse(tbPrice.Text, out price);
-
-            if (!isPriceNumeric)
+            if (!double.TryParse(tbPrice.Text, out price))
             {
-                MessageBox.Show("Price must be a number!",
-                                "Format exeption!",
-                                MessageBoxButton.OK,
-                                MessageBoxImage.Error);
+                MessageBox.Show("Price must be a number!", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 tbPrice.Focus();
                 return;
             }
-            
+            int quantity;
+            if (!int.TryParse(tbQuantity.Text, out quantity))
+            {
+                MessageBox.Show("Quantity must be an integer number!", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                tbQuantity.Focus();
+                return;
+            }
+
             string brand = tbBrand.Text;
             string color = tbColor.Text;
             string material = tbMaterial.Text;
@@ -68,8 +68,6 @@ namespace ASS_ClothingWarehouseManagement
             int status = cbStatus.Text == "Active" ? 1 : 0;
             string size = cbSize.Text;
             int category = (int)cbCategory.SelectedValue;
-            int quantity;
-            bool IsQuantityNumberic = int.TryParse(tbQuantity.Text, out quantity);
             Product p = new Product(productName, category, quantity, size, color, material, price, brand, status);
             _product.CreateProduct(p);
             this.DialogResult = true;

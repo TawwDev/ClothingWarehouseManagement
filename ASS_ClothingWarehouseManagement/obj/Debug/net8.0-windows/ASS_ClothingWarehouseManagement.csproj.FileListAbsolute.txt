@@ -85,3 +85,5 @@ F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagemen
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\ASS_ClothingWarehouseManagement.sourcelink.json
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\AddProductWindow.g.cs
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\AddProductWindow.baml
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\UpdateProductWindow.g.cs
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\UpdateProductWindow.baml
