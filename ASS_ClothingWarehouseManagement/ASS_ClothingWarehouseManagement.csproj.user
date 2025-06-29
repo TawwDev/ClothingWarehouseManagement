@@ -2,31 +2,37 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="AddImport.xaml.cs">
+    <Compile Update="view\ImportManagement\AddImportWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AddProductWindow.xaml.cs">
+    <Compile Update="view\ProductManagement\AddProductWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="LoginWindow.xaml.cs">
+    <Compile Update="view\SupplierManagement\AddSupplierWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UpdateProductWindow.xaml.cs">
+    <Compile Update="view\Login\LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\ExportListPage.xaml.cs">
+    <Compile Update="view\ProductManagement\UpdateProductWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\ImportListPage.xaml.cs">
+    <Compile Update="view\ExportManagement\ExportListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\ProductListPage.xaml.cs">
+    <Compile Update="view\ImportManagement\ImportListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\StatisticsListPage.xaml.cs">
+    <Compile Update="view\ProductManagement\ProductListPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\SupplierListPage.xaml.cs">
+    <Compile Update="view\Statistic\StatisticsListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\SupplierManagement\SupplierListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\SupplierManagement\UpdateSupplierWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

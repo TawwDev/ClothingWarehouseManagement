@@ -9,5 +9,7 @@ public partial class Category
 
     public string CategoryName { get; set; } = null!;
 
+    public double ProfitMargin { get; set; }
+
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }

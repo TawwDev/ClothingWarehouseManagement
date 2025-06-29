@@ -1,0 +1,69 @@
+﻿<Page x:Class="ASS_ClothingWarehouseManagement.view.SupplierListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
+      Title="SupplierListPage">
+
+    <Grid Margin="15" Grid.Column="1">
+        <Border Background="White" CornerRadius="8" Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Top Bar: Actions and Search -->
+                <Grid Grid.Row="0" Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left Action Buttons -->
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <Button x:Name="btnAddSupplier" Content="Add" Padding="10, 0, 10, 0" Click="btnAddSupplier_Click"/>
+                        <Button x:Name="btnEditSupplier" Content="Edit" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnEditSupplier_Click"/>
+                        <Button x:Name="btnDeleteSupplier" Content="Delete" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnDeleteSupplier_Click"/>
+                    </StackPanel>
+
+                    <!-- Right Search/Filter Area -->
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBox x:Name="tbSearch" Text="" 
+                             Foreground="Gray" 
+                             MinWidth="250" 
+                             Margin="10,0" 
+                             Padding="5"
+                             VerticalContentAlignment="Center" TextChanged="tbSearch_TextChanged"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Data Grid for Product List -->
+                <DataGrid Grid.Row="1"
+                      x:Name="SupplierDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      AlternatingRowBackground="#f9f9f9"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      GridLinesVisibility="Horizontal"
+                      HorizontalGridLinesBrush="#e0e0e0"
+                      BorderThickness="0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Supplier Id" Binding="{Binding SupplierId}" Width="70"/>
+                        <DataGridTextColumn Header="Supplier Name" Binding="{Binding SupplierName}" Width="2.1*"/>
+                        <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="1.5*"/>
+                        <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="1.5*"/>
+                        <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="3*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="50"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

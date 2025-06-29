@@ -149,7 +149,7 @@ namespace ASS_ClothingWarehouseManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;component/updateproductwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;V1.0.0.0;component/updateproductwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UpdateProductWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
