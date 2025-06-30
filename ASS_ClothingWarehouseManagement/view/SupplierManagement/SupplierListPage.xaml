@@ -45,7 +45,7 @@
 
                 <!-- Data Grid for Product List -->
                 <DataGrid Grid.Row="1"
-                      x:Name="SupplierDataGrid"
+                      x:Name="dgSupplier"
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
                       AlternatingRowBackground="#f9f9f9"

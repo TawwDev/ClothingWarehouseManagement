@@ -53,8 +53,8 @@ namespace ASS_ClothingWarehouseManagement.view {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;V1.0.0.0;component/view/exportmanagement/exportl" +
-                    "istpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;component/view/exportmanagement/exportlistpage.x" +
+                    "aml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\ExportManagement\ExportListPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

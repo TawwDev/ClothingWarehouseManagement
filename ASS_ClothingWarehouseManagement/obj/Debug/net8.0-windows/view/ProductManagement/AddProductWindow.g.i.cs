@@ -141,8 +141,8 @@ namespace ASS_ClothingWarehouseManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;V1.0.0.0;component/view/productmanagement/addpro" +
-                    "ductwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;component/view/productmanagement/addproductwindo" +
+                    "w.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\ProductManagement\AddProductWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

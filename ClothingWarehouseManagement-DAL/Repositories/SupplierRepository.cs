@@ -15,5 +15,24 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         {
             return _context.Suppliers.ToList();
         }
+
+        public void AddSupplier(Supplier supplier)
+        {
+            _context.Suppliers.Add(supplier);
+            _context.SaveChanges();
+        }
+
+        public void UpdateSupplier(Supplier supplier)
+        {
+            _context.Suppliers.Update(supplier);
+            _context.SaveChanges();
+        }
+
+        public void DeleteSupplier(Supplier supplier, List<ImportReceipt> importReceipts)
+        {
+            _context.RemoveRange(importReceipts);
+            _context.Remove(supplier);
+            _context.SaveChanges();
+        }
     }
 }

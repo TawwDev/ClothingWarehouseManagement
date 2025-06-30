@@ -7,9 +7,9 @@ F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagemen
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.AssemblyInfoInputs.cache
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.AssemblyInfo.cs
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.csproj.CoreCompileInputs.cache
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.sourcelink.json
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.dll
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\refint\ClothingWarehouseManagement-DAL.dll
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.pdb
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.genruntimeconfig.cache
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ref\ClothingWarehouseManagement-DAL.dll
-F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ClothingWarehouseManagement-DAL\obj\Debug\net8.0\ClothingWarehouseManagement-DAL.sourcelink.json

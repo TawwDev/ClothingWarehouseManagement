@@ -41,7 +41,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.UserName).HasName("PK__Account__66DCF95D0C21967C");
+            entity.HasKey(e => e.UserName).HasName("PK__Account__66DCF95DF3437E15");
 
             entity.ToTable("Account");
 
@@ -65,11 +65,11 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__23CAF1F80B90AD5A");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__23CAF1F86C1F8A73");
 
             entity.ToTable("Category");
 
-            entity.HasIndex(e => e.CategoryName, "UQ__Category__37077ABDA14AD0D1").IsUnique();
+            entity.HasIndex(e => e.CategoryName, "UQ__Category__37077ABD176CC340").IsUnique();
 
             entity.Property(e => e.CategoryId).HasColumnName("categoryID");
             entity.Property(e => e.CategoryName)
@@ -82,13 +82,13 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__B611CB9DEA569679");
+            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__B611CB9DC9DDB7FB");
 
             entity.ToTable("Customer");
 
-            entity.HasIndex(e => e.Email, "UQ__Customer__AB6E616449191530").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Customer__AB6E6164D52B3B81").IsUnique();
 
-            entity.HasIndex(e => e.Phone, "UQ__Customer__B43B145F3064560B").IsUnique();
+            entity.HasIndex(e => e.Phone, "UQ__Customer__B43B145F4E241A47").IsUnique();
 
             entity.Property(e => e.CustomerId).HasColumnName("customerID");
             entity.Property(e => e.Address)
@@ -112,7 +112,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<ExportReceipt>(entity =>
         {
-            entity.HasKey(e => e.ReceiptId).HasName("PK__ExportRe__CAA7E89814D79649");
+            entity.HasKey(e => e.ReceiptId).HasName("PK__ExportRe__CAA7E89830391770");
 
             entity.ToTable("ExportReceipt");
 
@@ -130,16 +130,16 @@ public partial class ClothingWarehouseManagementContext : DbContext
             entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ExportReceipts)
                 .HasForeignKey(d => d.CreatedBy)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ExportRec__creat__4E88ABD4");
+                .HasConstraintName("FK__ExportRec__creat__4F7CD00D");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.ExportReceipts)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__ExportRec__custo__4F7CD00D");
+                .HasConstraintName("FK__ExportRec__custo__5070F446");
         });
 
         modelBuilder.Entity<ExportReceiptDetail>(entity =>
         {
-            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ExportRe__7876E58C14EBE74F");
+            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ExportRe__7876E58C25DD688F");
 
             entity.ToTable("ExportReceiptDetail");
 
@@ -151,17 +151,17 @@ public partial class ClothingWarehouseManagementContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.ExportReceiptDetails)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ExportRec__produ__571DF1D5");
+                .HasConstraintName("FK__ExportRec__produ__5812160E");
 
             entity.HasOne(d => d.Receipt).WithMany(p => p.ExportReceiptDetails)
                 .HasForeignKey(d => d.ReceiptId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ExportRec__recei__5629CD9C");
+                .HasConstraintName("FK__ExportRec__recei__571DF1D5");
         });
 
         modelBuilder.Entity<ImportReceipt>(entity =>
         {
-            entity.HasKey(e => e.ReceiptId).HasName("PK__ImportRe__CAA7E898EB5D340E");
+            entity.HasKey(e => e.ReceiptId).HasName("PK__ImportRe__CAA7E898B6955E88");
 
             entity.ToTable("ImportReceipt");
 
@@ -176,16 +176,16 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
             entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ImportReceipts)
                 .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK__ImportRec__creat__49C3F6B7");
+                .HasConstraintName("FK__ImportRec__creat__4AB81AF0");
 
             entity.HasOne(d => d.Supplier).WithMany(p => p.ImportReceipts)
                 .HasForeignKey(d => d.SupplierId)
-                .HasConstraintName("FK__ImportRec__suppl__4AB81AF0");
+                .HasConstraintName("FK__ImportRec__suppl__4BAC3F29");
         });
 
         modelBuilder.Entity<ImportReceiptDetail>(entity =>
         {
-            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ImportRe__7876E58C9BC79778");
+            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ImportRe__7876E58C8730BCA9");
 
             entity.ToTable("ImportReceiptDetail");
 
@@ -197,17 +197,17 @@ public partial class ClothingWarehouseManagementContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.ImportReceiptDetails)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ImportRec__produ__534D60F1");
+                .HasConstraintName("FK__ImportRec__produ__5441852A");
 
             entity.HasOne(d => d.Receipt).WithMany(p => p.ImportReceiptDetails)
                 .HasForeignKey(d => d.ReceiptId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ImportRec__recei__52593CB8");
+                .HasConstraintName("FK__ImportRec__recei__534D60F1");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__2D10D14A60D4CC58");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__2D10D14AF1416EB5");
 
             entity.ToTable("Product");
 
@@ -241,18 +241,25 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__DB8E62CD5728008D");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__DB8E62CDB3604F79");
 
             entity.ToTable("Supplier");
+
+            entity.HasIndex(e => e.Email, "UQ__Supplier__AB6E6164074AA8DD").IsUnique();
 
             entity.Property(e => e.SupplierId).HasColumnName("supplierID");
             entity.Property(e => e.Address)
                 .HasMaxLength(150)
                 .HasColumnName("address");
+            entity.Property(e => e.Email)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("email");
             entity.Property(e => e.Phone)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("phone");
+            entity.Property(e => e.Status).HasColumnName("status");
             entity.Property(e => e.SupplierName)
                 .HasMaxLength(50)
                 .HasColumnName("supplierName");

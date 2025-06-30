@@ -53,8 +53,8 @@ namespace ASS_ClothingWarehouseManagement {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;V1.0.0.0;component/view/importmanagement/addimpo" +
-                    "rtwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;component/view/importmanagement/addimportwindow." +
+                    "xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\ImportManagement\AddImportWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -11,7 +11,11 @@ public partial class Supplier
 
     public string? Phone { get; set; }
 
+    public string? Email { get; set; }
+
     public string? Address { get; set; }
+
+    public int? Status { get; set; }
 
     public virtual ICollection<ImportReceipt> ImportReceipts { get; set; } = new List<ImportReceipt>();
 }

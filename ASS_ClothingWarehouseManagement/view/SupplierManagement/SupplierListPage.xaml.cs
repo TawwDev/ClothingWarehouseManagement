@@ -30,12 +30,23 @@ namespace ASS_ClothingWarehouseManagement.view
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            SupplierDataGrid.ItemsSource = _service.GetListSuppliers();
+            dgSupplier.ItemsSource = _service.GetListSuppliers();
         }
 
         private void btnAddSupplier_Click(object sender, RoutedEventArgs e)
         {
+            AddSupplierWindow addSupplierWindow = new AddSupplierWindow();
+            Opacity = 0.4;
+            bool? result = addSupplierWindow.ShowDialog();
+            Opacity = 1;
+            if (result == true)
+            {
 
+                MessageBox.Show("Add success!!", "Supplier list will be refreshed.", MessageBoxButton.OK);
+                dgSupplier.ItemsSource = null;
+                dgSupplier.ItemsSource = _service.GetListSuppliers();
+
+            }
         }
 
         private void btnEditSupplier_Click(object sender, RoutedEventArgs e)

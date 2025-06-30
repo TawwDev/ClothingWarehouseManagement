@@ -16,5 +16,21 @@ namespace ClothingWarehouseManagement_DLL.Services
         {
             return _repository.GetListSuppliers();
         }
+
+        public void AddSupplier(Supplier supplier)
+        {
+            _repository.AddSupplier(supplier);
+        }
+
+        public void UpdateSupplier(Supplier supplier)
+        {
+            _repository.UpdateSupplier(supplier);
+        }
+
+        public void DeleteSupplier(Supplier supplier, List<ImportReceipt> importReceipts)
+        {
+            _repository.DeleteSupplier(supplier, importReceipts);
+        }
+
     }
 }

@@ -53,8 +53,8 @@ namespace ASS_ClothingWarehouseManagement.view {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;V1.0.0.0;component/view/statistic/statisticslist" +
-                    "page.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ASS_ClothingWarehouseManagement;component/view/statistic/statisticslistpage.xaml" +
+                    "", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\Statistic\StatisticsListPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
