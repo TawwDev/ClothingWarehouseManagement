@@ -27,10 +27,19 @@ namespace ClothingWarehouseManagement_DLL.Services
             _repository.UpdateSupplier(supplier);
         }
 
-        public void DeleteSupplier(Supplier supplier, List<ImportReceipt> importReceipts)
+        public void DeleteSupplier(Supplier supplier)
         {
-            _repository.DeleteSupplier(supplier, importReceipts);
+            _repository.DeleteSupplier(supplier);
         }
 
+        public Supplier GetSupplierById(int id)
+        {
+            return _repository.GetSupplierById(id);
+        }
+
+        public List<Supplier> SearchSupplier(string keyWord)
+        {
+            return _repository.GetListSuppliers().Where(s => s.SupplierName.ToLower().Contains(keyWord.ToLower())).ToList();
+        }
     }
 }

@@ -3,56 +3,48 @@
   "WorkspaceRootPath": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\customermanagement\\updatecustomerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\customermanagement\\updatecustomerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\customermanagement\\updatecustomerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\customermanagement\\updatecustomerwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\customermanagement\\customerlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\customermanagement\\customerlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\supplierlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\supplierlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\updatesupplierwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\updatesupplierwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dal\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|solutionrelative:clothingwarehousemanagement-dal\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\productmanagement\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\productmanagement\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\productmanagement\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\productmanagement\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\productmanagement\\productlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\productmanagement\\productlistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\supplierlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\supplierlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\productmanagement\\productlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\productmanagement\\productlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|solutionrelative:clothingwarehousemanagement-dal\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|solutionrelative:clothingwarehousemanagement-dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dal\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|solutionrelative:clothingwarehousemanagement-dal\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3533778B-1715-4120-BFE0-CC21EF1FE744}|ClothingWarehouseManagement-DLL\\ClothingWarehouseManagement-DLL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3533778B-1715-4120-BFE0-CC21EF1FE744}|ClothingWarehouseManagement-DLL\\ClothingWarehouseManagement-DLL.csproj|solutionrelative:clothingwarehousemanagement-dll\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3533778B-1715-4120-BFE0-CC21EF1FE744}|ClothingWarehouseManagement-DLL\\ClothingWarehouseManagement-DLL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dll\\services\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3533778B-1715-4120-BFE0-CC21EF1FE744}|ClothingWarehouseManagement-DLL\\ClothingWarehouseManagement-DLL.csproj|solutionrelative:clothingwarehousemanagement-dll\\services\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\clothingwarehousemanagement-dal\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{637027A0-C696-4160-8BBE-A1C05FA28C31}|ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj|solutionrelative:clothingwarehousemanagement-dal\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\addsupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\customermanagement\\addcustomerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\customermanagement\\addcustomerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|f:\\fpt_uni\\semester_5_summer_25\\prn212\\assignment\\ass_clothingwarehousemanagement\\ass_clothingwarehousemanagement\\view\\suppliermanagement\\updatesupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541862F7-6BBE-4046-A0C8-C30400E2C11C}|ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement.csproj|solutionrelative:ass_clothingwarehousemanagement\\view\\suppliermanagement\\updatesupplierwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,155 +102,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddProductWindow.xaml",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml",
+              "DocumentIndex": 1,
+              "Title": "UpdateCustomerWindow.xaml",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-30T10:25:11.692Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductListPage.xaml.cs",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml.cs",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml.cs",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml.cs",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAmwEYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T10:21:43.212Z"
+              "WhenOpened": "2025-07-07T16:38:16.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "ProductListPage.xaml",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\ProductListPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-30T10:21:17.957Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SupplierListPage.xaml.cs",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA9wCkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T10:20:05.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateSupplierWindow.xaml",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-30T10:18:54.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Product.cs",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "ClothingWarehouseManagement-DAL\\Models\\Product.cs",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Models\\Product.cs",
-              "RelativeToolTip": "ClothingWarehouseManagement-DAL\\Models\\Product.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T10:17:55.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddProductWindow.xaml.cs",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml.cs",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml.cs",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\ProductManagement\\AddProductWindow.xaml.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAywEgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T10:17:47.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SupplierListPage.xaml",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-30T10:16:33.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "ClothingWarehouseManagement-DAL\\Repositories\\ProductRepository.cs",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\ProductRepository.cs",
-              "RelativeToolTip": "ClothingWarehouseManagement-DAL\\Repositories\\ProductRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:52:49.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "SupplierRepository.cs",
               "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\SupplierRepository.cs",
               "RelativeDocumentMoniker": "ClothingWarehouseManagement-DAL\\Repositories\\SupplierRepository.cs",
               "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\SupplierRepository.cs",
               "RelativeToolTip": "ClothingWarehouseManagement-DAL\\Repositories\\SupplierRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABZAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwCoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:39:03.551Z"
+              "WhenOpened": "2025-07-07T12:48:45.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DLL\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "ClothingWarehouseManagement-DLL\\Services\\CustomerService.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DLL\\Services\\CustomerService.cs",
+              "RelativeToolTip": "ClothingWarehouseManagement-DLL\\Services\\CustomerService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:46:52.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SupplierService.cs",
               "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DLL\\Services\\SupplierService.cs",
               "RelativeDocumentMoniker": "ClothingWarehouseManagement-DLL\\Services\\SupplierService.cs",
               "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DLL\\Services\\SupplierService.cs",
               "RelativeToolTip": "ClothingWarehouseManagement-DLL\\Services\\SupplierService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wCMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwCcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:35:22.788Z"
+              "WhenOpened": "2025-07-07T12:46:46.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "ClothingWarehouseManagement-DAL\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "ClothingWarehouseManagement-DAL\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:46:38.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerListPage.xaml.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\CustomerListPage.xaml.cs",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\CustomerListPage.xaml.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\CustomerListPage.xaml.cs",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\CustomerListPage.xaml.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAswG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:39:09.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SupplierListPage.xaml.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\SupplierListPage.xaml.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAIAxwGIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:39:08.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateSupplierWindow.xaml.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml.cs",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\UpdateSupplierWindow.xaml.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwEsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:37:28.659Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UpdateCustomerWindow.xaml.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml.cs",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\UpdateCustomerWindow.xaml.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAuwFkAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:37:26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddCustomerWindow.xaml.cs",
+              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\AddCustomerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\AddCustomerWindow.xaml.cs",
+              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\AddCustomerWindow.xaml.cs",
+              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\CustomerManagement\\AddCustomerWindow.xaml.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAIwFgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T12:35:06.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AddSupplierWindow.xaml.cs",
               "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml.cs",
               "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml.cs",
               "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml.cs",
               "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwEEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAwwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T09:18:40.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AddSupplierWindow.xaml",
-              "DocumentMoniker": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml",
-              "RelativeDocumentMoniker": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml",
-              "ToolTip": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml",
-              "RelativeToolTip": "ASS_ClothingWarehouseManagement\\view\\SupplierManagement\\AddSupplierWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-30T09:18:34.662Z"
+              "WhenOpened": "2025-07-07T12:34:57.19Z"
             }
           ]
         }

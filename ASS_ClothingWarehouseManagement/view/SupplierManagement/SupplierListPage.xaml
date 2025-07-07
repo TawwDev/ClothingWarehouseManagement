@@ -30,6 +30,7 @@
                         <Button x:Name="btnAddSupplier" Content="Add" Padding="10, 0, 10, 0" Click="btnAddSupplier_Click"/>
                         <Button x:Name="btnEditSupplier" Content="Edit" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnEditSupplier_Click"/>
                         <Button x:Name="btnDeleteSupplier" Content="Delete" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnDeleteSupplier_Click"/>
+                        <Button x:Name="btnRefresh" Content="Refresh" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnRefresh_Click"/>
                     </StackPanel>
 
                     <!-- Right Search/Filter Area -->

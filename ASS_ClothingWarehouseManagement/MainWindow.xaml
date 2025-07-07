@@ -37,8 +37,9 @@
                     <Button Grid.Row="2" x:Name="btnImport" Content="Import" Margin="10,0,10,20" Height="40" Click="btnImport_Click"/>
                     <Button Grid.Row="3" x:Name="btnExport" Content="Export" Margin="10,0,10,20" Height="40" Click="btnExport_Click"/>
                     <Button Grid.Row="4" x:Name="btnSupplier" Content="Supplier" Margin="10,0,10,20" Height="40" Click="btnSupplier_Click"/>
-                    <Button Grid.Row="5" x:Name="btnStatistics" Content="Statistics" Margin="10,0,10,20" Height="40" Click="btnStatistics_Click"/>
-                    <Button Grid.Row="6" x:Name="btnLogOut" Content="Logout" Margin="10,30,10,20" Height="40" VerticalAlignment="Bottom" Click="btnLogOut_Click"/>
+                    <Button Grid.Row="5" x:Name="btnCustomer" Content="Customer" Margin="10,0,10,20" Height="40" Click="btnCustomer_Click"/>
+                    <Button Grid.Row="6" x:Name="btnStatistics" Content="Statistics" Margin="10,0,10,20" Height="40" Click="btnStatistics_Click"/>
+                    <Button Grid.Row="7" x:Name="btnLogOut" Content="Logout" Margin="10,30,10,20" Height="40" VerticalAlignment="Bottom" Click="btnLogOut_Click"/>
                 </Grid>
             </StackPanel>
         </Border>

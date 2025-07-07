@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view.SupplierManagement"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
         Title="UpdateSupplierWindow" Height="400" Width="800">
     <Grid>
         <Grid>

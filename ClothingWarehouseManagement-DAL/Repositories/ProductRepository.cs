@@ -10,7 +10,7 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 {
     public class ProductRepository
     {
-        private CWMContext _context = new CWMContext();
+        private ClothingWarehouseManagementContext _context = new ClothingWarehouseManagementContext();
         
         public Product? GetProductById(int productId)
         {

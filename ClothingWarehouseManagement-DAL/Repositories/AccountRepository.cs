@@ -9,7 +9,7 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 {
     public class AccountRepository
     {
-        private CWMContext _context = new CWMContext();
+        private ClothingWarehouseManagementContext _context = new ClothingWarehouseManagementContext();
 
         public Account? GetAccount(string userName, string email, string passWord)
         {

@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="view\CustomerManagement\" />
     <Folder Include="view\PricePricingManagement\" />
   </ItemGroup>
 

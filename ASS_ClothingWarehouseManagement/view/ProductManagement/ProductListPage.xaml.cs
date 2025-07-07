@@ -22,7 +22,7 @@ namespace ASS_ClothingWarehouseManagement.view
     /// </summary>
     public partial class ProductListPage : Page
     {
-        private ProductService _product = new ProductService();
+        private ProductService _service = new ProductService();
         public ProductListPage()
         {
             InitializeComponent();
@@ -31,10 +31,10 @@ namespace ASS_ClothingWarehouseManagement.view
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             dgProduct.ItemsSource = null;
-            dgProduct.ItemsSource = _product.GetListProduct();
+            dgProduct.ItemsSource = _service.GetListProduct();
             
             cbCategory.ItemsSource = null;
-            List<Category> categories = _product.GetListCategory();
+            List<Category> categories = _service.GetListCategory();
             categories.Insert(0, new Category { CategoryId = 0, CategoryName = "--- All Category ---" });
             cbCategory.ItemsSource = categories;
             cbCategory.DisplayMemberPath = "CategoryName";
@@ -51,12 +51,12 @@ namespace ASS_ClothingWarehouseManagement.view
                 if (categoryId == 0)
                 {
                     dgProduct.ItemsSource = null;
-                    dgProduct.ItemsSource = _product.GetListProduct();
+                    dgProduct.ItemsSource = _service.GetListProduct();
                 }
                 else
                 {
                     dgProduct.ItemsSource = null;
-                    dgProduct.ItemsSource = _product.GetListProductByCategoryId(categoryId);
+                    dgProduct.ItemsSource = _service.GetListProductByCategoryId(categoryId);
                 }    
             }
         }
@@ -72,7 +72,7 @@ namespace ASS_ClothingWarehouseManagement.view
 
                 MessageBox.Show("Add success!!", "Product list will be refreshed.", MessageBoxButton.OK);
                 dgProduct.ItemsSource = null;
-                dgProduct.ItemsSource = _product.GetListProduct();
+                dgProduct.ItemsSource = _service.GetListProduct();
 
             }
         }
@@ -86,7 +86,7 @@ namespace ASS_ClothingWarehouseManagement.view
                 MessageBox.Show("Please select a product to edit.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            UpdateProductWindow updateProductWindow = new UpdateProductWindow(selectedProduct, _product);
+            UpdateProductWindow updateProductWindow = new UpdateProductWindow(selectedProduct, _service);
             Opacity = 0.4;
             bool? result = updateProductWindow.ShowDialog();
             Opacity = 1;
@@ -94,7 +94,7 @@ namespace ASS_ClothingWarehouseManagement.view
             {
                 MessageBox.Show("Update success!!", "Product list will be refreshed.", MessageBoxButton.OK);
                 dgProduct.ItemsSource = null;
-                dgProduct.ItemsSource = _product.GetListProduct();
+                dgProduct.ItemsSource = _service.GetListProduct();
 
             }
         }
@@ -113,10 +113,10 @@ namespace ASS_ClothingWarehouseManagement.view
                 MessageBoxResult result = MessageBox.Show("Do you agree?", $"Do you want to delete product with id: {selectedProduct.ProductId}", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
-                    _product.DeleteProduct(selectedProduct.ProductId);
+                    _service.DeleteProduct(selectedProduct.ProductId);
                     MessageBox.Show("Product deleted successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                     dgProduct.ItemsSource = null; 
-                    dgProduct.ItemsSource = _product.GetListProduct();
+                    dgProduct.ItemsSource = _service.GetListProduct();
                 }
             }
         }
@@ -124,9 +124,18 @@ namespace ASS_ClothingWarehouseManagement.view
         private void tbSearchKeyWord_TextChanged(object sender, TextChangedEventArgs e)
         {
             cbCategory.SelectedIndex = 0;
-            var result = _product.SearchProducts(tbSearchKeyWord.Text.Trim());
+            var result = _service.SearchProducts(tbSearchKeyWord.Text.Trim());
             dgProduct.ItemsSource = null;
             dgProduct.ItemsSource = result;
+        }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            dgProduct.SelectedItem = null;
+            dgProduct.ItemsSource = null;
+            dgProduct.ItemsSource = _service.GetListProduct().ToList();
+            cbCategory.SelectedIndex = 0;
+            tbSearchKeyWord.Text = string.Empty;
         }
     }
 }

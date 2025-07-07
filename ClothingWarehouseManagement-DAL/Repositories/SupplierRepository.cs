@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClothingWarehouseManagement_DAL.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ClothingWarehouseManagement_DAL.Repositories
 {
     public class SupplierRepository
     {
-        private CWMContext _context = new CWMContext();
+        private ClothingWarehouseManagementContext _context = new ClothingWarehouseManagementContext();
 
         public List<Supplier> GetListSuppliers()
         {
@@ -28,11 +29,17 @@ namespace ClothingWarehouseManagement_DAL.Repositories
             _context.SaveChanges();
         }
 
-        public void DeleteSupplier(Supplier supplier, List<ImportReceipt> importReceipts)
+        public void DeleteSupplier(Supplier supplier)
         {
-            _context.RemoveRange(importReceipts);
-            _context.Remove(supplier);
+            Supplier s = _context.Suppliers.Include(s => s.ImportReceipts).FirstOrDefault(s => s.SupplierId == supplier.SupplierId);
+            s.ImportReceipts.Clear();
+            _context.Remove(s);
             _context.SaveChanges();
+        }
+
+        public Supplier GetSupplierById(int id)
+        {
+            return _context.Suppliers.FirstOrDefault(x => x.SupplierId == id);
         }
     }
 }

@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="view\CustomerManagement\AddCustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\CustomerManagement\CustomerListPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\CustomerManagement\UpdateCustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\ImportManagement\AddImportWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

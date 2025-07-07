@@ -21,7 +21,7 @@ namespace ASS_ClothingWarehouseManagement
     /// </summary>
     public partial class UpdateProductWindow : Window
     {
-        public Product _productToUpdate { get; set; }
+        public Product ProductToUpdate { get; set; }
         private ProductService _productService;
         public UpdateProductWindow()
         {
@@ -30,28 +30,28 @@ namespace ASS_ClothingWarehouseManagement
         public UpdateProductWindow(Product product, ProductService productService)
         {
             InitializeComponent();
-            _productToUpdate = product;
+            ProductToUpdate = product;
             _productService = productService;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_productToUpdate != null)
+            if (ProductToUpdate != null)
             {
-                tbProductId.Text = _productToUpdate.ProductId.ToString();
-                tbProductName.Text = _productToUpdate.ProductName;
-                tbPrice.Text = _productToUpdate.Price.ToString();
-                tbBrand.Text = _productToUpdate.Brand;
-                tbColor.Text = _productToUpdate.Color;
-                tbMaterial.Text = _productToUpdate.Material;
-                tbQuantity.Text = _productToUpdate.Quantity.ToString();
-                cbSize.Text = _productToUpdate.Size;
-                cbStatus.SelectedIndex = _productToUpdate.Status == 1 ? 0 : 1;
+                tbProductId.Text = ProductToUpdate.ProductId.ToString();
+                tbProductName.Text = ProductToUpdate.ProductName;
+                tbPrice.Text = ProductToUpdate.Price.ToString();
+                tbBrand.Text = ProductToUpdate.Brand;
+                tbColor.Text = ProductToUpdate.Color;
+                tbMaterial.Text = ProductToUpdate.Material;
+                tbQuantity.Text = ProductToUpdate.Quantity.ToString();
+                cbSize.Text = ProductToUpdate.Size;
+                cbStatus.SelectedIndex = ProductToUpdate.Status == 1 ? 0 : 1;
 
                 cbCategory.ItemsSource = _productService.GetListCategory();
                 cbCategory.DisplayMemberPath = "CategoryName";
                 cbCategory.SelectedValuePath = "CategoryId";
-                cbCategory.SelectedValue = _productToUpdate.CategoryId;
+                cbCategory.SelectedValue = ProductToUpdate.CategoryId;
             }
         }
         private void btnUpdateProduct_Click(object sender, RoutedEventArgs e)
@@ -83,16 +83,16 @@ namespace ASS_ClothingWarehouseManagement
             }
             int productId;
             bool IsProductId = int.TryParse(tbProductId.Text, out productId);
-            _productToUpdate.ProductName = tbProductName.Text;
-            _productToUpdate.Price = price;
-            _productToUpdate.Brand = tbBrand.Text;
-            _productToUpdate.Color = tbColor.Text;
-            _productToUpdate.Material = tbMaterial.Text;
-            _productToUpdate.Quantity = quantity;
-            _productToUpdate.Size = cbSize.Text;
-            _productToUpdate.Status = cbStatus.Text == "Active" ? 1 : 0;
-            _productToUpdate.CategoryId = (int)cbCategory.SelectedValue;
-            _productService.UpdateProduct(_productToUpdate);
+            ProductToUpdate.ProductName = tbProductName.Text;
+            ProductToUpdate.Price = price;
+            ProductToUpdate.Brand = tbBrand.Text;
+            ProductToUpdate.Color = tbColor.Text;
+            ProductToUpdate.Material = tbMaterial.Text;
+            ProductToUpdate.Quantity = quantity;
+            ProductToUpdate.Size = cbSize.Text;
+            ProductToUpdate.Status = cbStatus.Text == "Active" ? 1 : 0;
+            ProductToUpdate.CategoryId = (int)cbCategory.SelectedValue;
+            _productService.UpdateProduct(ProductToUpdate);
             this.DialogResult = true;
             this.Close();
         }

@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ASS_ClothingWarehouseManagement.view;
+using ASS_ClothingWarehouseManagement.view.CustomerManagement;
 using ClothingWarehouseManagement_DAL.Models;
 
 namespace ASS_ClothingWarehouseManagement
@@ -64,7 +65,10 @@ namespace ASS_ClothingWarehouseManagement
         {
             NavigateToPage(new SupplierListPage());
         }
-
+        private void btnCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToPage(new CustomerListPage());
+        }
         private void btnStatistics_Click(object sender, RoutedEventArgs e)
         {
             NavigateToPage(new StatisticsListPage());
