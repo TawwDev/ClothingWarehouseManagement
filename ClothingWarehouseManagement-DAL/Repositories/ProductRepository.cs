@@ -19,16 +19,11 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         }
         public List<Product> GetListProduct()
         {
-            var qr = from p in _context.Products
-                      .Include(p => p.Category)
-                      select p;
-            return qr.ToList();
+            return _context.Products.Include(x => x.Category).ToList();
         }
         public List<Category> GetListCategory()
         {
-            var qr = from c in _context.Categories
-                     select c;
-            return qr.ToList();
+            return _context.Categories.ToList();
         }
         public List<Product> GetListProductByCategoryId(int categoryId)
         {

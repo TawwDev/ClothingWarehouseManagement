@@ -5,6 +5,34 @@ namespace ClothingWarehouseManagement_DAL.Models;
 
 public partial class Product
 {
+    public Product()
+    {
+    }
+
+    public Product(string productName, int category, int quantity, string material, double price, string brand, int status)
+    {
+        ProductName = productName;
+        CategoryId = category;
+        Quantity = quantity;
+        Material = material;
+        Price = price;
+        Brand = brand;
+        Status = status;
+    }
+
+    public Product(int category, int productId, string? productName, int categoryId, int quantity, string? material, double price, string? brand, int? status)
+    {
+        CategoryId = category;
+        ProductId = productId;
+        ProductName = productName;
+        CategoryId = categoryId;
+        Quantity = quantity;
+        Material = material;
+        Price = price;
+        Brand = brand;
+        Status = status;
+    }
+
     public int ProductId { get; set; }
 
     public string? ProductName { get; set; }
@@ -12,10 +40,6 @@ public partial class Product
     public int CategoryId { get; set; }
 
     public int Quantity { get; set; }
-
-    public string Size { get; set; } = null!;
-
-    public string? Color { get; set; }
 
     public string? Material { get; set; }
 
@@ -31,30 +55,4 @@ public partial class Product
 
     public virtual ICollection<ImportReceiptDetail> ImportReceiptDetails { get; set; } = new List<ImportReceiptDetail>();
 
-    public Product(int productId, string? productName, int categoryId, int quantity, string size, string? color, string? material, double price, string? brand, int? status)
-    {
-        ProductId = productId;
-        ProductName = productName;
-        CategoryId = categoryId;
-        Quantity = quantity;
-        Size = size;
-        Color = color;
-        Material = material;
-        Price = price;
-        Brand = brand;
-        Status = status;
-    }
-
-    public Product(string? productName, int categoryId, int quantity, string size, string? color, string? material, double price, string? brand, int? status)
-    {
-        ProductName = productName;
-        CategoryId = categoryId;
-        Quantity = quantity;
-        Size = size;
-        Color = color;
-        Material = material;
-        Price = price;
-        Brand = brand;
-        Status = status;
-    }
 }

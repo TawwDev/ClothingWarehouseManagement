@@ -36,7 +36,7 @@ namespace ASS_ClothingWarehouseManagement
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbColor.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
+            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
             {
                 MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -62,13 +62,11 @@ namespace ASS_ClothingWarehouseManagement
             }
 
             string brand = tbBrand.Text;
-            string color = tbColor.Text;
             string material = tbMaterial.Text;
             string productName = tbProductName.Text;
             int status = cbStatus.Text == "Active" ? 1 : 0;
-            string size = cbSize.Text;
             int category = (int)cbCategory.SelectedValue;
-            Product p = new Product(productName, category, quantity, size, color, material, price, brand, status);
+            Product p = new Product(productName, category, quantity, material, price, brand, status);
             _product.CreateProduct(p);
             this.DialogResult = true;
             this.Close();

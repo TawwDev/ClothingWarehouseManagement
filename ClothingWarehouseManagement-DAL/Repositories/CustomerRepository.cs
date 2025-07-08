@@ -31,8 +31,16 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 
         public void DeleteCustomer(Customer customer)
         {
-            Customer c = _context.Customers.Include(c => c.ExportReceipts).FirstOrDefault(c => c.CustomerId == customer.CustomerId);
-            c.ExportReceipts.Clear();
+            var exportReceipts = _context.ExportReceipts.Include(x => x.ExportReceiptDetails).Where(x => x.CustomerId == customer.CustomerId).ToList();
+            Customer c = _context.Customers.FirstOrDefault(c => c.CustomerId == customer.CustomerId);
+            if(exportReceipts != null)
+            {
+                foreach (var item in exportReceipts)
+                {
+                    item.ExportReceiptDetails.Clear();
+                }
+                _context.ExportReceipts.RemoveRange(exportReceipts);
+            }
             _context.Remove(customer);
             _context.SaveChanges();
         }

@@ -31,8 +31,17 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 
         public void DeleteSupplier(Supplier supplier)
         {
+            var importReceipts = _context.ImportReceipts.Include(ir => ir.ImportReceiptDetails).Where(ir => ir.SupplierId == supplier.SupplierId).ToList();
             Supplier s = _context.Suppliers.Include(s => s.ImportReceipts).FirstOrDefault(s => s.SupplierId == supplier.SupplierId);
-            s.ImportReceipts.Clear();
+
+            if (importReceipts != null)
+            {
+                foreach (var item in importReceipts)
+                {
+                    item.ImportReceiptDetails.Clear();
+                }
+                _context.ImportReceipts.RemoveRange(importReceipts);
+            }  
             _context.Remove(s);
             _context.SaveChanges();
         }

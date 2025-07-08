@@ -42,10 +42,8 @@ namespace ASS_ClothingWarehouseManagement
                 tbProductName.Text = ProductToUpdate.ProductName;
                 tbPrice.Text = ProductToUpdate.Price.ToString();
                 tbBrand.Text = ProductToUpdate.Brand;
-                tbColor.Text = ProductToUpdate.Color;
                 tbMaterial.Text = ProductToUpdate.Material;
                 tbQuantity.Text = ProductToUpdate.Quantity.ToString();
-                cbSize.Text = ProductToUpdate.Size;
                 cbStatus.SelectedIndex = ProductToUpdate.Status == 1 ? 0 : 1;
 
                 cbCategory.ItemsSource = _productService.GetListCategory();
@@ -57,7 +55,7 @@ namespace ASS_ClothingWarehouseManagement
         private void btnUpdateProduct_Click(object sender, RoutedEventArgs e)
         {
             
-            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbColor.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
+            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
             {
                 MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -86,10 +84,8 @@ namespace ASS_ClothingWarehouseManagement
             ProductToUpdate.ProductName = tbProductName.Text;
             ProductToUpdate.Price = price;
             ProductToUpdate.Brand = tbBrand.Text;
-            ProductToUpdate.Color = tbColor.Text;
             ProductToUpdate.Material = tbMaterial.Text;
             ProductToUpdate.Quantity = quantity;
-            ProductToUpdate.Size = cbSize.Text;
             ProductToUpdate.Status = cbStatus.Text == "Active" ? 1 : 0;
             ProductToUpdate.CategoryId = (int)cbCategory.SelectedValue;
             _productService.UpdateProduct(ProductToUpdate);

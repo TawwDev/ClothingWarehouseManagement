@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClothingWarehouseManagement-DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14521dd61d8785b80472016d909e9988a72baa88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f70f1652385e3e6a792747c79809c55baa09fe8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClothingWarehouseManagement-DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClothingWarehouseManagement-DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
