@@ -27,15 +27,14 @@ namespace ASS_ClothingWarehouseManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //string role = AuthenticatedUser.Role == 1 ? "Admin" : "Staff";
-            //lbHello.Content = $"Hello {role}!";
+            string role = AuthenticatedUser.Role == 1 ? "Admin" : "Staff";
+            lbHello.Content = $"Hello {role}!";
 
-            //if (AuthenticatedUser.Role == 2)
-            //{
-            //    btnProduct.IsEnabled = false;
-            //    btnStatistics.IsEnabled = false;
-            //}
-
+            if (AuthenticatedUser.Role == 2)
+            {
+                btnProduct.IsEnabled = false;
+                btnStatistics.IsEnabled = false;
+            }
         }
 
         private void NavigateToPage(Page page)

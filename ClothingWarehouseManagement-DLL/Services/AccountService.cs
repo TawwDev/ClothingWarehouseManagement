@@ -10,6 +10,7 @@ namespace ClothingWarehouseManagement_DLL.Services
 {
     public class AccountService
     {
+
         private AccountRepository _account = new AccountRepository();
 
         public Account? Authenticate(string userName, string email, string passWord)

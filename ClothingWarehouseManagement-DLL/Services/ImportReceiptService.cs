@@ -31,7 +31,11 @@ namespace ClothingWarehouseManagement_DLL.Services
             {
                 return _repository.GetListImportRecept().Where(x => x.CreatedByNavigation.FullName.Trim().ToLower().Contains(keyWord.Trim().ToLower())).ToList();
             }
-                
+        }
+
+        public int GetLastImportId()
+        {
+            return _repository.GetLastImportId();
         }
     }
 }

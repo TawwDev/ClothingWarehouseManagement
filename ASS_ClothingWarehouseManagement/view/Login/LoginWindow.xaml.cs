@@ -48,8 +48,12 @@ namespace ASS_ClothingWarehouseManagement
                 MessageBox.Show("Invalid user name or pass word!", "Wrong credentials", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            else
+            {
+                Session.SetCurrentUser(account);
+            }
 
-            MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow();
             mainWindow.AuthenticatedUser = account;
             mainWindow.Show();
             this.Hide();

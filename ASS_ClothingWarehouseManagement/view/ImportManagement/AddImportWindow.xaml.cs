@@ -24,6 +24,7 @@ namespace ASS_ClothingWarehouseManagement
     {
         private ProductService _productService = new();
         private SupplierService _supplierService = new();
+        private ImportReceiptService _importService = new();
         private List<ImportReceiptDetail> importReceiptDetails = new List<ImportReceiptDetail>();
         public AddImportWindow()
         {
@@ -62,6 +63,10 @@ namespace ASS_ClothingWarehouseManagement
             dgProduct.ItemsSource = _productService.GetListProduct();
             cbSupplier.ItemsSource = _supplierService.GetListSuppliers();
             cbSupplier.DisplayMemberPath = "SupplierName";
+            string createdBy = Session.CurrentUser.FullName;
+            tbCreatedBy.Text = createdBy;
+            int id = _importService.GetLastImportId() + 1;
+            tbImportReceiptId.Text = id.ToString();
         }
 
         private void btnAddProductToTheOrder_Click(object sender, RoutedEventArgs e)
@@ -89,6 +94,7 @@ namespace ASS_ClothingWarehouseManagement
                 double price = double.Parse(tbDetailPrice.Text.Trim());
                 if (importReceiptDetails != null)
                 {
+                    int id = _importService.GetLastImportId() + 1;
                     foreach (var item in importReceiptDetails)
                     {
                         if (item.Product.ProductId == selectedProduct.ProductId)
@@ -97,10 +103,17 @@ namespace ASS_ClothingWarehouseManagement
                             return;
                         }
                     }
-                    importReceiptDetails.Add(new ImportReceiptDetail { Product = selectedProduct, Quantity = quanity, UnitPrice = price });
+                    importReceiptDetails.Add(new ImportReceiptDetail {Product = selectedProduct, ProductId = selectedProduct.ProductId, Quantity = quanity, UnitPrice = price });
                     MessageBox.Show($"Add success import receipt with product id = {selectedProduct.ProductId}!", "Add success!", MessageBoxButton.OK, MessageBoxImage.Information);
                     ClearInfor();
+                    double? totalAmount = 0;
+                    foreach (var item in importReceiptDetails)
+                    {
+                        totalAmount += (item.UnitPrice * item.Quantity);
+                    }
+                    tbTotalAmount.Text = "Total Amount: " + totalAmount.ToString() + " VND";
                 }
+                
                 dgImportRecreiptDetail.ItemsSource = null;
                 dgImportRecreiptDetail.ItemsSource = importReceiptDetails;
             }
@@ -207,6 +220,34 @@ namespace ASS_ClothingWarehouseManagement
             tbProductId.Clear();
             tbProductMaterial.Clear();
             tbProductName.Clear();
+        }
+
+        private void btnAddImportReceipt_Click(object sender, RoutedEventArgs e)
+        {   
+            string createdBy = Session.CurrentUser.UserName;
+            var supplier = cbSupplier.SelectedItem as Supplier;
+            if(supplier == null)
+            {
+                MessageBox.Show("Please choose supplier before create import!", "Invalid selection!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            DateOnly createdDate = DateOnly.FromDateTime(DateTime.Now);
+            double totalAmount = (double)importReceiptDetails.Sum(x => x.Quantity * x.UnitPrice);
+            ImportReceipt ir = new ImportReceipt {CreatedAt = createdDate, CreatedBy = createdBy, SupplierId = supplier.SupplierId, TotalAmount = totalAmount, ImportReceiptDetails = importReceiptDetails};
+            _importService.AddImportRecept(ir);
+            foreach (var item in importReceiptDetails)
+            {
+                _productService.UpdateQuantityProduct(item.ProductId, (int)item.Quantity);
+            }
+            this.DialogResult = true;
+            this.Close();
+        }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string keyWord = tbSearch.Text;
+            dgProduct.ItemsSource = null;
+            dgProduct.ItemsSource = _productService.SearchProducts(keyWord);
         }
     }
 }

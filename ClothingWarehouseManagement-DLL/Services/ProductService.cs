@@ -47,5 +47,10 @@ namespace ClothingWarehouseManagement_DLL.Services
         {
             return _repositories.GetListProduct().Where(p => p.ProductName.ToLower().Contains(keyWord.ToLower())).ToList();
         }
+
+        public void UpdateQuantityProduct(int productId, int quantity)
+        {
+            _repositories.UpdateQuantityProduct(productId, quantity);
+        }
     }
 }

@@ -18,10 +18,20 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         }
         public void AddImportRecept(ImportReceipt ir)
         {
+            foreach (var detail in ir.ImportReceiptDetails)
+            {
+                if (detail.Product != null)
+                {
+                    detail.Product = null;
+                }
+            }
             _context.ImportReceipts.Add(ir);
             _context.SaveChanges();
         }
 
-
+        public int GetLastImportId()
+        {
+            return _context.ImportReceipts.OrderByDescending(x => x.ReceiptId).Select(x => x.ReceiptId).FirstOrDefault();
+        }
     }
 }

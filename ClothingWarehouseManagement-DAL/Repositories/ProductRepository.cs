@@ -52,5 +52,13 @@ namespace ClothingWarehouseManagement_DAL.Repositories
                 _context.SaveChanges();
             }
         }
+
+        public void UpdateQuantityProduct(int productId, int quantity)
+        {
+            var p = _context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
+            p.Quantity += quantity;
+            _context.Products.Update(p);
+            _context.SaveChanges();
+        }
     }
 }
