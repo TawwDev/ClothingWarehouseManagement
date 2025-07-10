@@ -23,16 +23,16 @@
                 </ComboBox>
 
                 <Label Content="From date" FontWeight="SemiBold"/>
-                <DatePicker x:Name="dpFrom" Margin="0,5,0,10"/>
+                <DatePicker x:Name="dpFrom" Margin="0,5,0,10" SelectedDateChanged="dpFrom_SelectedDateChanged"/>
 
                 <Label Content="To date" FontWeight="SemiBold"/>
-                <DatePicker x:Name="dpTo" Margin="0,5,0,10"/>
+                <DatePicker x:Name="dpTo" Margin="0,5,0,10" SelectedDateChanged="dpTo_SelectedDateChanged"/>
 
                 <Label Content="From amount (VND)" FontWeight="SemiBold"/>
-                <TextBox x:Name="tbFromAmount" Margin="0,5,0,10"/>
+                <TextBox x:Name="tbFromAmount" Margin="0,5,0,10" TextChanged="tbFromAmount_TextChanged"/>
 
                 <Label Content="To amount (VND)" FontWeight="SemiBold"/>
-                <TextBox x:Name="tbToAmount" Margin="0,5,0,0"/>
+                <TextBox x:Name="tbToAmount" Margin="0,5,0,0" TextChanged="tbToAmount_TextChanged"/>
             </StackPanel>
         </Border>
 

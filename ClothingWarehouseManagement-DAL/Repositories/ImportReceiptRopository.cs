@@ -14,7 +14,7 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 
         public List<ImportReceipt> GetListImportRecept()
         {
-            return _context.ImportReceipts.Include(ir => ir.Supplier).Include(ir => ir.CreatedByNavigation).ToList();
+            return _context.ImportReceipts.Include(ir => ir.Supplier).Include(ir => ir.CreatedByNavigation).Include(ir => ir.ImportReceiptDetails).ToList();
         }
         public void AddImportRecept(ImportReceipt ir)
         {
@@ -32,6 +32,11 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         public int GetLastImportId()
         {
             return _context.ImportReceipts.OrderByDescending(x => x.ReceiptId).Select(x => x.ReceiptId).FirstOrDefault();
+        }
+
+        public List<ImportReceiptDetail> GetImportReceiptDetails(int receptId)
+        {
+            return _context.ImportReceiptDetails.Include(x => x.Product).Where(x => x.ReceiptId == receptId).ToList();
         }
     }
 }

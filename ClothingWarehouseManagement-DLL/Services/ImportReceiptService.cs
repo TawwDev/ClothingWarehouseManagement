@@ -21,21 +21,14 @@ namespace ClothingWarehouseManagement_DLL.Services
             _repository.AddImportRecept(ir);
         }
 
-        public List<ImportReceipt> GetListSearchImportReceipts(string keyWord, Supplier supplier)
-        {
-            if (supplier != null && supplier.SupplierId != 0)
-            {
-                return _repository.GetListImportRecept().Where(x => x.CreatedByNavigation.FullName.Trim().ToLower().Contains(keyWord.Trim().ToLower()) && supplier.SupplierId == x.SupplierId).ToList();
-            }
-            else
-            {
-                return _repository.GetListImportRecept().Where(x => x.CreatedByNavigation.FullName.Trim().ToLower().Contains(keyWord.Trim().ToLower())).ToList();
-            }
-        }
-
         public int GetLastImportId()
         {
             return _repository.GetLastImportId();
+        }
+
+        public List<ImportReceiptDetail> GetImportReceiptDetails(int receptId)
+        {
+            return _repository.GetImportReceiptDetails(receptId);
         }
     }
 }
