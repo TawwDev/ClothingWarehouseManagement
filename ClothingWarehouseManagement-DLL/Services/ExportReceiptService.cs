@@ -30,5 +30,11 @@ namespace ClothingWarehouseManagement_DLL.Services
         {
             return _repository.GetExportReceiptDetails(receptId);
         }
+
+
+        public List<SalesReport> GetSalesReport()
+        {
+            return _repository.GetSalesReport();
+        }
     }
 }

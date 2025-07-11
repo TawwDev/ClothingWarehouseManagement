@@ -38,5 +38,37 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         {
             return _context.ExportReceiptDetails.Include(x => x.Product).Where(x => x.ReceiptId == receptId).ToList();
         }
+
+        public List<SalesReport> GetSalesReport()
+        {
+            var capitalData = _context.ImportReceipts
+                .Select(ir => new {
+                    Date = ir.CreatedAt.Value,
+                    Capital = ir.TotalAmount,
+                    Revenue = 0.0,
+                    CostOfGoodsSold = 0.0
+                });
+
+            var salesData = _context.ExportReceipts
+                .Select(er => new {
+                    Date = er.CreatedAt,
+                    Capital = 0.0,
+                    Revenue = er.TotalAmount,
+                    CostOfGoodsSold = er.ExportReceiptDetails.Sum(d => (d.Quantity ?? 0) * d.Product.BasePrice)
+                });
+
+            var reportQuery = capitalData.Concat(salesData)
+                .GroupBy(x => x.Date)
+                .Select(g => new SalesReport
+                {
+                    Date = g.Key,
+                    Capital = g.Sum(item => item.Capital),
+                    Revenue = g.Sum(item => item.Revenue),
+                    Profit = g.Sum(item => item.Revenue) - g.Sum(item => item.CostOfGoodsSold)
+                })
+                .OrderBy(r => r.Date);
+
+            return reportQuery.ToList();
+        }
     }
 }

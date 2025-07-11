@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view.Statistic"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
       Title="InventoryPage">
 
     <Grid>
@@ -40,7 +41,7 @@
 
                                 <!-- Content -->
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15,0,0,0">
-                                    <TextBlock Text="13" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
+                                    <TextBlock x:Name="tbTotalProduct"  Text="" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
                                     <TextBlock Text="Products in Stock" FontSize="12" Foreground="Gray" TextWrapping="Wrap"/>
                                 </StackPanel>
                             </Grid>
@@ -61,7 +62,7 @@
 
                                 <!-- Content -->
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15,0,0,0">
-                                    <TextBlock Text="18" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
+                                    <TextBlock x:Name="tbTotalCustomer" Text="" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
                                     <TextBlock Text="Total Customers" FontSize="12" Foreground="Gray" TextWrapping="Wrap"/>
                                 </StackPanel>
                             </Grid>
@@ -82,8 +83,8 @@
 
                                 <!-- Content -->
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15,0,0,0">
-                                    <TextBlock Text="5" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
-                                    <TextBlock Text="Active Employees" FontSize="12" Foreground="Gray" TextWrapping="Wrap"/>
+                                    <TextBlock x:Name="tbTotalSupplier" Text="" FontSize="24" FontWeight="Bold" Foreground="#5A6C7C"/>
+                                    <TextBlock Text="Total Supplier" FontSize="12" Foreground="Gray" TextWrapping="Wrap"/>
                                 </StackPanel>
                             </Grid>
                         </Border>
@@ -99,18 +100,18 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="From Date:" Grid.Column="0" VerticalAlignment="Center"/>
-                        <DatePicker Grid.Column="1" Margin="5,0,20,0" VerticalAlignment="Center" />
+                        <DatePicker x:Name="dpFromDateOverView" Grid.Column="1" Margin="5,0,20,0" VerticalAlignment="Center" SelectedDateChanged="dpFromDateOverView_SelectedDateChanged"/>
 
                         <TextBlock Text="To Date:" Grid.Column="2" VerticalAlignment="Center" />
-                        <DatePicker Grid.Column="3" Margin="5,0,0,0" VerticalAlignment="Center" />
+                        <DatePicker x:Name="dpToDateOverView" Grid.Column="3" Margin="5,0,0,0" VerticalAlignment="Center" SelectedDateChanged="dpToDateOverView_SelectedDateChanged"/>
                     </Grid>
 
-                    <DataGrid Grid.Row="2"
+                    <DataGrid Grid.Row="2" x:Name="dgSalesReport"
                               AutoGenerateColumns="False" IsReadOnly="True"
-                              GridLinesVisibility="Horizontal">
+                              >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
-                            <DataGridTextColumn Header="Capital" Binding="{Binding Cost}" Width="*"/>
+                            <DataGridTextColumn Header="Capital" Binding="{Binding Capital}" Width="*"/>
                             <DataGridTextColumn Header="Revenue" Binding="{Binding Revenue}" Width="*"/>
                             <DataGridTextColumn Header="Profit" Binding="{Binding Profit}" Width="*"/>
                         </DataGrid.Columns>
@@ -127,7 +128,7 @@
                     </Grid.ColumnDefinitions>
 
                     <!-- Panel bộ lọc bên trái -->
-                    <Border Grid.Column="0" Background="White" Margin="10,10,10,10" CornerRadius="5" Padding="20" Grid.ColumnSpan="2">
+                    <Border Grid.Column="0" Background="White" CornerRadius="5" Padding="20" Grid.ColumnSpan="2">
                         <StackPanel>
                             <TextBlock Text="Search Product" FontWeight="SemiBold" Margin="0,0,0,5"/>
                             <TextBox Padding="5" FontSize="14"/>
