@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using ClothingWarehouseManagement_DAL.Models;
@@ -27,36 +28,40 @@ namespace ClothingWarehouseManagement_DAL.Repositories
             }
             _context.ImportReceipts.Add(ir);
             _context.SaveChanges();
+            UpdatePriceOfProductAfterImport(ir.ReceiptId);
         }
 
-        public void UpdatePriceOfProductAfterImport()
+        public void UpdatePriceOfProductAfterImport(int receiptId)
         {
-            var listImportReceipt = GetListImportRecept();
-            foreach (var receipt in listImportReceipt)
+            var importDetails = _context.ImportReceiptDetails.Where(x => x.ReceiptId == receiptId).ToList();
+            if (!importDetails.Any())
             {
-                foreach (var detail in receipt.ImportReceiptDetails)
-                {
-                    if (detail.Quantity <= 0)
-                    {
-                        continue;
-                    }
-
-                    double importPricePerUnit = (double)(detail.UnitPrice / detail.Quantity);
-
-                    double newSellingPrice = importPricePerUnit * 1.10;
-
-                    var productToUpdate = _context.Products.FirstOrDefault(x => x.ProductId == detail.ProductId);
-
-                    if (productToUpdate != null)
-                    {
-                        productToUpdate.Price = newSellingPrice;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Warning: Product with ID {detail.ProductId} not found.");
-                    }
-                }
+                return;
             }
+            foreach (var detail in importDetails)
+            {
+                var productToUpdate = _context.Products.Where(x => x.ProductId == detail.ProductId).Include(x => x.Category).FirstOrDefault();
+                if (productToUpdate == null || productToUpdate.Category == null || detail.Quantity <= 0 || detail.UnitPrice < 0)
+                {
+                    continue;
+                }
+                double oldStockValue = productToUpdate.BasePrice * productToUpdate.Quantity;
+                double newStockValue = (double)(detail.UnitPrice * detail.Quantity);
+                int totalNewQuantity = (int)(productToUpdate.Quantity + detail.Quantity);
+                double newAverageBasePrice = 0;
+                if (totalNewQuantity > 0)
+                {
+                    newAverageBasePrice = Math.Round((oldStockValue + newStockValue) / totalNewQuantity / 1000) * 1000;
+                }
+                productToUpdate.BasePrice = newAverageBasePrice;
+                var profitMargin = productToUpdate.Category.ProfitMargin;
+                var newSellingPrice = productToUpdate.BasePrice * (1.0 + profitMargin);
+                productToUpdate.Price = Math.Round(newSellingPrice / 1000) * 1000;
+                productToUpdate.Quantity += (int)detail.Quantity;
+                _context.Products.Update(productToUpdate);
+            }
+            _context.SaveChanges();
+
         }
 
         public int GetLastImportId()

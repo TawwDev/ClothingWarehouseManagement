@@ -25,6 +25,11 @@ namespace ClothingWarehouseManagement_DLL.Services
         {
             return _repositories.GetListProductAvailble();
         }
+
+        public List<Product> GetListProductAvailbleQuantity()
+        {
+            return _repositories.GetListProductAvailbleQuantity();
+        }
         public List<Category> GetListCategory()
         {
             return _repositories.GetListCategory();

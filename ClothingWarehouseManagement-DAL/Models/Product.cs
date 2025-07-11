@@ -41,9 +41,11 @@ public partial class Product
 
     public int Quantity { get; set; }
 
-    public string? Material { get; set; }
+    public double BasePrice { get; set; }
 
     public double Price { get; set; }
+
+    public string? Material { get; set; }
 
     public string? Brand { get; set; }
 

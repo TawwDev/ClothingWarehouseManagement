@@ -24,6 +24,11 @@ namespace ClothingWarehouseManagement_DAL.Repositories
 
         public List<Product> GetListProductAvailble()
         {
+            return _context.Products.Include(x => x.Category).Where(x => x.Status == 1).ToList();
+        }
+
+        public List<Product> GetListProductAvailbleQuantity()
+        {
             return _context.Products.Include(x => x.Category).Where(x => x.Status == 1 && x.Quantity > 0).ToList();
         }
         public List<Category> GetListCategory()

@@ -234,10 +234,6 @@ namespace ASS_ClothingWarehouseManagement
             double totalAmount = (double)importReceiptDetails.Sum(x => x.Quantity * x.UnitPrice);
             ImportReceipt ir = new ImportReceipt {CreatedAt = createdDate, CreatedBy = createdBy, SupplierId = supplier.SupplierId, TotalAmount = totalAmount, ImportReceiptDetails = importReceiptDetails};
             _importService.AddImportRecept(ir);
-            foreach (var item in importReceiptDetails)
-            {
-                _productService.UpdateQuantityProductAfterImport(item.ProductId, (int)item.Quantity);
-            }
             this.DialogResult = true;
             this.Close();
         }

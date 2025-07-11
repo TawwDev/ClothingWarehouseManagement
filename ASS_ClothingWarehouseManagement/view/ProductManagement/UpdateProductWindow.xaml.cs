@@ -43,7 +43,6 @@ namespace ASS_ClothingWarehouseManagement
                 tbPrice.Text = ProductToUpdate.Price.ToString();
                 tbBrand.Text = ProductToUpdate.Brand;
                 tbMaterial.Text = ProductToUpdate.Material;
-                tbQuantity.Text = ProductToUpdate.Quantity.ToString();
                 cbStatus.SelectedIndex = ProductToUpdate.Status == 1 ? 0 : 1;
 
                 cbCategory.ItemsSource = _productService.GetListCategory();
@@ -72,20 +71,13 @@ namespace ASS_ClothingWarehouseManagement
                 tbPrice.Focus();
                 return;
             }
-            int quantity;
-            if (!int.TryParse(tbQuantity.Text, out quantity))
-            {
-                MessageBox.Show("Quantity must be an integer number!", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                tbQuantity.Focus(); 
-                return;
-            }
+
             int productId;
             bool IsProductId = int.TryParse(tbProductId.Text, out productId);
             ProductToUpdate.ProductName = tbProductName.Text;
             ProductToUpdate.Price = price;
             ProductToUpdate.Brand = tbBrand.Text;
             ProductToUpdate.Material = tbMaterial.Text;
-            ProductToUpdate.Quantity = quantity;
             ProductToUpdate.Status = cbStatus.Text == "Active" ? 1 : 0;
             ProductToUpdate.CategoryId = (int)cbCategory.SelectedValue;
             _productService.UpdateProduct(ProductToUpdate);

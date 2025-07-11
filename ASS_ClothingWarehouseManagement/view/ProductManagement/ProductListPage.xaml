@@ -62,12 +62,13 @@
                           >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Code" Binding="{Binding ProductId}" Width="50"/>
-                        <DataGridTextColumn Header="Name" Binding="{Binding ProductName}" Width="2*"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding ProductName}" Width="1.5*"/>
                         <DataGridTextColumn Header="Unit Price" Binding="{Binding Price}" Width="*"/>
+                        <DataGridTextColumn Header="Base Price" Binding="{Binding BasePrice}" Width="*"/>
                         <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="60"/>
                         <DataGridTextColumn Header="Brand" Binding="{Binding Brand}" Width="1.3*"/>
                         <DataGridTextColumn Header="Material" Binding="{Binding Material}" Width="*"/>
-                        <DataGridTextColumn Header="Category" Binding="{Binding Category.CategoryName}" Width="*"/>
+                        <DataGridTextColumn Header="Category" Binding="{Binding Category.CategoryName}" Width="1.5*"/>
                         <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="45"/>
                     </DataGrid.Columns>
 

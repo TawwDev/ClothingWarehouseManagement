@@ -32,7 +32,7 @@ namespace ASS_ClothingWarehouseManagement.view.ExportManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dgProduct.ItemsSource = _productService.GetListProductAvailble();
+            dgProduct.ItemsSource = _productService.GetListProductAvailbleQuantity();
             cbCustomer.ItemsSource = _customerService.GetListCustomers();
             cbCustomer.DisplayMemberPath = "CustomerName";
             string createdBy = Session.CurrentUser.FullName;

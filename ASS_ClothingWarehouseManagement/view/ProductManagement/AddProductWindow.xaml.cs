@@ -36,7 +36,7 @@ namespace ASS_ClothingWarehouseManagement
 
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text) || string.IsNullOrWhiteSpace(tbPrice.Text))
+            if (string.IsNullOrWhiteSpace(tbBrand.Text) || string.IsNullOrWhiteSpace(tbMaterial.Text) || string.IsNullOrWhiteSpace(tbProductName.Text))
             {
                 MessageBox.Show("Please ensure all product information is filled out.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
@@ -46,27 +46,12 @@ namespace ASS_ClothingWarehouseManagement
                 MessageBox.Show("Please select a category.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            double price;
-            if (!double.TryParse(tbPrice.Text, out price))
-            {
-                MessageBox.Show("Price must be a number!", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                tbPrice.Focus();
-                return;
-            }
-            int quantity;
-            if (!int.TryParse(tbQuantity.Text, out quantity))
-            {
-                MessageBox.Show("Quantity must be an integer number!", "Format Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                tbQuantity.Focus();
-                return;
-            }
-
             string brand = tbBrand.Text;
             string material = tbMaterial.Text;
             string productName = tbProductName.Text;
             int status = cbStatus.Text == "Active" ? 1 : 0;
             int category = (int)cbCategory.SelectedValue;
-            Product p = new Product(productName, category, quantity, material, price, brand, status);
+            Product p = new Product(productName, category, 0, material, 0, brand, status);
             _product.CreateProduct(p);
             this.DialogResult = true;
             this.Close();

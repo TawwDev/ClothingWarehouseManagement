@@ -39,9 +39,10 @@
                             <TextBox x:Name="tbSearch" Text="" TextChanged="tbSearch_TextChanged"/>
                             <DataGrid x:Name="dgProduct" Margin="0,5,0,5" VerticalScrollBarVisibility="Auto" MinHeight="200" MaxHeight="265" AutoGenerateColumns="False" SelectionChanged="dgProduct_SelectionChanged">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Product Id" Width="1*" Binding="{Binding ProductId}"/>
+                                    <DataGridTextColumn Header="Id" Width="0.5*" Binding="{Binding ProductId}"/>
                                     <DataGridTextColumn Header="Product Name" Width="2*" Binding="{Binding ProductName}"/>
-                                    <DataGridTextColumn Header="Quantity" Width="1*" Binding="{Binding Quantity}"/>
+                                    <DataGridTextColumn Header="Quantity" Width="0.6*" Binding="{Binding Quantity}"/>
+                                    <DataGridTextColumn Header="BasePrice" Width="0.8*" Binding="{Binding BasePrice}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                           

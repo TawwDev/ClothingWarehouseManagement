@@ -32,7 +32,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
+
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
@@ -52,11 +52,6 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,0,15,25">
-                            <Label Content="Quantity" />
-                            <TextBox x:Name="tbQuantity" Padding="5" Text="0" IsReadOnly="True"/>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,0,15,25">
                             <Label Content="Price"/>
                             <TextBox x:Name="tbPrice" Padding="5"/>
                         </StackPanel>
@@ -67,12 +62,8 @@
                             <TextBox x:Name="tbMaterial" Padding="5"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,15,25">
-                            <Label Content="Color" />
-                            <TextBox x:Name="tbColor" Padding="5"/>
-                        </StackPanel>
 
-                        <StackPanel Grid.Row="1" Grid.Column="2" Margin="0,0,15,25">
+                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,15,25">
                             <Label Content="Brand" />
                             <TextBox x:Name="tbBrand" Padding="5"/>
                         </StackPanel>
@@ -87,17 +78,6 @@
                         </StackPanel>
 
                         <StackPanel Grid.Row="2" Grid.Column="1" Margin="0,0,15,25">
-                            <Label Content="Size"/>
-                            <ComboBox x:Name="cbSize" Padding="5" SelectedIndex="0">
-                                <ComboBoxItem Content="S"/>
-                                <ComboBoxItem Content="M"/>
-                                <ComboBoxItem Content="L"/>
-                                <ComboBoxItem Content="XL"/>
-                                <ComboBoxItem Content="FreeSize"/>
-                            </ComboBox>
-                        </StackPanel>
-
-                        <StackPanel Grid.Row="2" Grid.Column="2" Margin="0,0,15,25">
                             <Label Content="Status"/>
                             <ComboBox x:Name="cbStatus" SelectedIndex="0" Padding="5">
                                 <ComboBoxItem Content="Active"/>
