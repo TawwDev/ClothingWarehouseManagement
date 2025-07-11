@@ -1,0 +1,153 @@
+﻿<Window x:Class="ASS_ClothingWarehouseManagement.view.ExportManagement.AddExportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view.ExportManagement"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded" 
+        WindowStartupLocation="CenterScreen"
+        Title="AddExportWindow" Height="600" Width="1200">
+    <Grid>
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Pane Card -->
+            <Border Grid.Column="0" Background="White" Margin="0,10,5,10" CornerRadius="8">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="1" Direction="270" Color="Black" Opacity="0.15" BlurRadius="10"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Top-Left Section: Product Selection and Details -->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Product List -->
+                        <StackPanel Grid.Column="0" Margin="10">
+                            <TextBox x:Name="tbSearch" Text="" TextChanged="tbSearch_TextChanged"/>
+                            <DataGrid x:Name="dgProduct" Margin="0,5,0,5" VerticalScrollBarVisibility="Auto" MinHeight="200" MaxHeight="265" AutoGenerateColumns="False" SelectionChanged="dgProduct_SelectionChanged">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Product Id" Width="0.8*" Binding="{Binding ProductId}"/>
+                                    <DataGridTextColumn Header="Product Name" Width="2*" Binding="{Binding ProductName}"/>
+                                    <DataGridTextColumn Header="Quantity" Width="0.8*" Binding="{Binding Quantity}"/>
+                                    <DataGridTextColumn Header="Unit Price" Width="1*" Binding="{Binding Price}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                        </StackPanel>
+
+                        <!-- Product Details Form -->
+                        <StackPanel Grid.Column="1" Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                    <Label Content="Product Code" />
+                                    <TextBox x:Name="tbProductId" IsReadOnly="True"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                    <Label Content="Product Name"/>
+                                    <TextBox x:Name="tbProductName" IsReadOnly="True"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                    <Label Content="Material" />
+                                    <TextBox x:Name="tbProductMaterial" IsReadOnly="True"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Margin="5,0,0,0">
+                                    <Label Content="Quantity*"/>
+                                    <TextBox x:Name="tbDetailQuantity"/>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                            </Grid>
+                            <Grid Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                    <Label Content="Unit Price"/>
+                                    <TextBox x:Name="tbDetailPrice" IsReadOnly="true"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,20,0,0">
+                                    <Button x:Name="btnAddProductToTheOrder" Content="Add" Background="#07a646" Foreground="White" Padding="8,5" Margin="10, 0, 0, 0" Click="btnAddProductToTheOrder_Click"/>
+                                    <Button x:Name="btnUpdateProductInOrder" Content="Update" Background="#FF074BA6" Foreground="White" Padding="8,5" Margin="15, 0, 0, 0" Click="btnUpdateProductInOrder_Click"/>
+                                    <Button x:Name="btnDeleteProductInOrder" Content="Delete" Background="#bd0404" Foreground="White" Padding="8,5" Margin="15, 0, 0, 0" Click="btnDeleteProductInOrder_Click"/>
+                                </StackPanel>
+                            </Grid>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Bottom-Left Section: DataGrid of items to be added -->
+                    <DataGrid Grid.Row="1" Margin="10,0,10,10" AutoGenerateColumns="False" x:Name="dgExportRecreiptDetail" SelectionChanged="dgExportRecreiptDetail_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Product Id" Width="1*" Binding="{Binding Product.ProductId}"/>
+                            <DataGridTextColumn Header="Product Name" Width="2*" Binding="{Binding Product.ProductName}"/>
+                            <DataGridTextColumn Header="Material" Width="2*" Binding="{Binding Product.Material}"/>
+                            <DataGridTextColumn Header="Quantity" Width="1*" Binding="{Binding Quantity}"/>
+                            <DataGridTextColumn Header="Unit Price" Width="1.5*" Binding="{Binding UnitPrice}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Border>
+
+            <!-- Right Pane Card -->
+            <Border Grid.Column="1" Background="White" Margin="5,10,10,10" CornerRadius="8">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="1" Direction="270" Color="Black" Opacity="0.15" BlurRadius="10"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Top-Right Section: Receipt Details -->
+                    <StackPanel Grid.Row="0" Margin="15">
+                        <Label Content="Export receipt code"/>
+                        <TextBox x:Name="tbImportReceiptId" IsReadOnly="True"/>
+                        <Label Content="Staff Created" Margin="0,10,0,0"/>
+                        <TextBox x:Name="tbCreatedBy" Text="" IsReadOnly="True"/>
+                        <Label Content="Customer" Margin="0,10,0,0"/>
+                        <ComboBox x:Name="cbCustomer" />
+                    </StackPanel>
+
+                    <!-- Bottom-Right Section: Total and Action Button -->
+                    <StackPanel Grid.Row="1" Margin="15">
+                        <TextBlock x:Name="tbTotalAmount" Text="" FontWeight="Bold" Foreground="Red" FontSize="16" HorizontalAlignment="Right" Margin="0,0,0,10"/>
+                        <Button x:Name="btnAddExportReceipt" Content="Create Export" Background="#27ae60" Foreground="White" Padding="10" FontWeight="Bold" Height="40" Click="btnAddExportReceipt_Click"        />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid> 
+</Window>

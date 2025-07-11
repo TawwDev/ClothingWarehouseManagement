@@ -21,6 +21,10 @@ namespace ClothingWarehouseManagement_DLL.Services
         {
             return _repositories.GetListProduct();
         }
+        public List<Product> GetListProductAvailble()
+        {
+            return _repositories.GetListProductAvailble();
+        }
         public List<Category> GetListCategory()
         {
             return _repositories.GetListCategory();
@@ -48,9 +52,14 @@ namespace ClothingWarehouseManagement_DLL.Services
             return _repositories.GetListProduct().Where(p => p.ProductName.ToLower().Contains(keyWord.ToLower())).ToList();
         }
 
-        public void UpdateQuantityProduct(int productId, int quantity)
+        public void UpdateQuantityProductAfterImport(int productId, int quantity)
         {
-            _repositories.UpdateQuantityProduct(productId, quantity);
+            _repositories.UpdateQuantityProductAfterImport(productId, quantity);
+        }
+
+        public void UpdateQuantityProductAfterExport(int productId, int quantity)
+        {
+            _repositories.UpdateQuantityProductAfterExport(productId, quantity);
         }
     }
 }

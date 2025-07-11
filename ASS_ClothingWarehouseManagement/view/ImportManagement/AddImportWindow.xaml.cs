@@ -60,7 +60,7 @@ namespace ASS_ClothingWarehouseManagement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dgProduct.ItemsSource = _productService.GetListProduct();
+            dgProduct.ItemsSource = _productService.GetListProductAvailble();
             cbSupplier.ItemsSource = _supplierService.GetListSuppliers();
             cbSupplier.DisplayMemberPath = "SupplierName";
             string createdBy = Session.CurrentUser.FullName;
@@ -72,7 +72,6 @@ namespace ASS_ClothingWarehouseManagement
         private void btnAddProductToTheOrder_Click(object sender, RoutedEventArgs e)
         {
             var selectedProduct = dgProduct.SelectedItem as Product;
-            //Regex regex = new Regex("[^0-9]+");
             if (selectedProduct == null)
             {
                 MessageBox.Show("Please choose product before add import receipt detail!", "Invalid selection!", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -90,7 +89,7 @@ namespace ASS_ClothingWarehouseManagement
             }
             try
             {
-                int quanity = int.Parse(tbDetailQuantity.Text.Trim());
+                int quantity = int.Parse(tbDetailQuantity.Text.Trim());
                 double price = double.Parse(tbDetailPrice.Text.Trim());
                 if (importReceiptDetails != null)
                 {
@@ -103,7 +102,7 @@ namespace ASS_ClothingWarehouseManagement
                             return;
                         }
                     }
-                    importReceiptDetails.Add(new ImportReceiptDetail {Product = selectedProduct, ProductId = selectedProduct.ProductId, Quantity = quanity, UnitPrice = price });
+                    importReceiptDetails.Add(new ImportReceiptDetail {Product = selectedProduct, ProductId = selectedProduct.ProductId, Quantity = quantity, UnitPrice = price });
                     MessageBox.Show($"Add success import receipt with product id = {selectedProduct.ProductId}!", "Add success!", MessageBoxButton.OK, MessageBoxImage.Information);
                     ClearInfor();
                     double? totalAmount = 0;
@@ -145,7 +144,7 @@ namespace ASS_ClothingWarehouseManagement
             }
             try
             {
-                int quanity = int.Parse(tbDetailQuantity.Text.Trim());
+                int quantity = int.Parse(tbDetailQuantity.Text.Trim());
                 double price = double.Parse(tbDetailPrice.Text.Trim());
                 if (importReceiptDetails != null)
                 {
@@ -154,7 +153,7 @@ namespace ASS_ClothingWarehouseManagement
                         if (item.Product.ProductId == selectedImportReceiptDetail.Product.ProductId)
                         {
                             item.UnitPrice = price;
-                            item.Quantity = quanity;
+                            item.Quantity = quantity;
                         }
                     }
                     MessageBox.Show($"Update success import receipt with product id = {selectedImportReceiptDetail.Product.ProductId}!", "Update success!", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -237,7 +236,7 @@ namespace ASS_ClothingWarehouseManagement
             _importService.AddImportRecept(ir);
             foreach (var item in importReceiptDetails)
             {
-                _productService.UpdateQuantityProduct(item.ProductId, (int)item.Quantity);
+                _productService.UpdateQuantityProductAfterImport(item.ProductId, (int)item.Quantity);
             }
             this.DialogResult = true;
             this.Close();

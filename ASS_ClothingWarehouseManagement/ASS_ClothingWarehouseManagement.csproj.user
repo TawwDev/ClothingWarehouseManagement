@@ -11,10 +11,16 @@
     <Compile Update="view\CustomerManagement\UpdateCustomerWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\ExportManagement\AddExportWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\ExportManagement\ViewExportDetailWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\ImportManagement\AddImportWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="view\ImportManagement\ViewDetailsPage.xaml.cs">
+    <Compile Update="view\ImportManagement\ViewImportDetailWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\ProductManagement\AddProductWindow.xaml.cs">

@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ASS_ClothingWarehouseManagement.view"
       mc:Ignorable="d" 
+      Loaded="Page_Loaded"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ExportListPage">
 
@@ -17,32 +18,21 @@
         <!-- Left Filter Panel -->
         <Border Grid.Column="0" Background="White" CornerRadius="5" Padding="15" Margin="0,0,10,0">
             <StackPanel>
-                <Label Content="Nhà cung cấp" FontWeight="SemiBold"/>
-                <ComboBox Margin="0,5,0,10">
-                    <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
-                    <ComboBoxItem>Công Ty TNHH Thế Giới Di Động</ComboBoxItem>
-                    <ComboBoxItem>Công Ty Samsung Việt Nam</ComboBoxItem>
-                    <!-- Thêm các nhà cung cấp khác ở đây -->
+                <Label Content="Customer" FontWeight="SemiBold"/>
+                <ComboBox x:Name="cbCustomer" Margin="0,5,0,10" SelectionChanged="cbSupplier_SelectionChanged">
                 </ComboBox>
 
-                <Label Content="Nhân viên nhập" FontWeight="SemiBold"/>
-                <ComboBox Margin="0,5,0,10">
-                    <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
-                    <ComboBoxItem>Trần Nhật Sinh</ComboBoxItem>
-                    <!-- Thêm các nhân viên khác ở đây -->
-                </ComboBox>
+                <Label Content="From date" FontWeight="SemiBold"/>
+                <DatePicker x:Name="dpFrom" Margin="0,5,0,10" SelectedDateChanged="dpFrom_SelectedDateChanged"/>
 
-                <Label Content="Từ ngày" FontWeight="SemiBold"/>
-                <DatePicker Margin="0,5,0,10"/>
+                <Label Content="To date" FontWeight="SemiBold"/>
+                <DatePicker x:Name="dpTo" Margin="0,5,0,10" SelectedDateChanged="dpTo_SelectedDateChanged"/>
 
-                <Label Content="Đến ngày" FontWeight="SemiBold"/>
-                <DatePicker Margin="0,5,0,10"/>
+                <Label Content="From amount (VND)" FontWeight="SemiBold"/>
+                <TextBox x:Name="tbFromAmount" Margin="0,5,0,10" TextChanged="tbFromAmount_TextChanged"/>
 
-                <Label Content="Từ số tiền (VND)" FontWeight="SemiBold"/>
-                <TextBox Margin="0,5,0,10"/>
-
-                <Label Content="Đến số tiền (VND)" FontWeight="SemiBold"/>
-                <TextBox Margin="0,5,0,0"/>
+                <Label Content="To amount (VND)" FontWeight="SemiBold"/>
+                <TextBox x:Name="tbToAmount" Margin="0,5,0,0" TextChanged="tbToAmount_TextChanged"/>
             </StackPanel>
         </Border>
 
@@ -58,10 +48,9 @@
             <Border Grid.Row="0" Background="White" CornerRadius="5" Padding="10">
                 <StackPanel Orientation="Horizontal">
                     <!-- Các nút hành động thay thế cho icon -->
-                    <Button Content="THÊM" />
-                    <Button Content="CHI TIẾT" />
-                    <Button Content="HUỶ PHIẾU" />
-
+                    <Button x:Name="btnAddExportRecept" Content="Add" Padding="10, 0, 10, 0" Click="btnAddExportRecept_Click"/>
+                    <Button x:Name="btnViewExportRecept" Content="View" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnViewExportRecept_Click"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0" Click="btnRefresh_Click"/>
                 </StackPanel>
             </Border>
 
@@ -74,18 +63,16 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel Grid.Column="0" Orientation="Horizontal">
-                        <ComboBox VerticalAlignment="Center" MinWidth="120">
-                            <ComboBoxItem IsSelected="True">Tất cả</ComboBoxItem>
-                        </ComboBox>
-                        <TextBox Text="Nhập nội dung tìm kiếm..." Foreground="Gray" VerticalAlignment="Center" MinWidth="250" Margin="10,0" Padding="5"/>
+                        <TextBox x:Name="tbSearch" Foreground="Gray" VerticalAlignment="Center" MinWidth="350" Margin="10,0" Padding="5" TextChanged="tbSearch_TextChanged"/>
                     </StackPanel>
 
-                    <Button Grid.Column="1" Content="Làm mới" VerticalAlignment="Center" Padding="10,5"/>
+
                 </Grid>
             </Border>
 
             <!-- Data Grid -->
             <DataGrid Grid.Row="2" 
+                  x:Name="dgExportRecept"
                   Margin="0,10,0,0" 
                   AutoGenerateColumns="False" 
                   IsReadOnly="True"
@@ -95,15 +82,14 @@
                   Background="White"
                   BorderThickness="0">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="STT" Binding="{Binding STT}" Width="50"/>
-                    <DataGridTextColumn Header="Mã phiếu nh..." Binding="{Binding MaPhieu}" Width="120"/>
-                    <DataGridTextColumn Header="Nhà cung cấp" Binding="{Binding NhaCungCap}" Width="*"/>
-                    <DataGridTextColumn Header="Nhân viên nhập" Binding="{Binding NhanVienNhap}" Width="*"/>
-                    <DataGridTextColumn Header="Thời gian" Binding="{Binding ThoiGian}" Width="*"/>
-                    <DataGridTextColumn Header="Tổng tiền" Binding="{Binding TongTien, StringFormat={}{0:N0}đ}" Width="*">
+                    <DataGridTextColumn Header="ReceptId" Binding="{Binding ReceiptId}" Width="80"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding Customer.CustomerName}" Width="1.5*"/>
+                    <DataGridTextColumn Header="Created By" Binding="{Binding CreatedByNavigation.FullName}" Width="1*"/>
+                    <DataGridTextColumn Header="Created Date" Binding="{Binding CreatedAt}" Width="1*"/>
+                    <DataGridTextColumn Header="Total Amount" Binding="{Binding TotalAmount}" Width="1*">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
-                                <Setter Property="HorizontalAlignment" Value="Right"/>
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>

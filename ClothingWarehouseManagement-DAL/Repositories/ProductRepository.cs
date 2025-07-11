@@ -21,6 +21,11 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         {
             return _context.Products.Include(x => x.Category).ToList();
         }
+
+        public List<Product> GetListProductAvailble()
+        {
+            return _context.Products.Include(x => x.Category).Where(x => x.Status == 1 && x.Quantity > 0).ToList();
+        }
         public List<Category> GetListCategory()
         {
             return _context.Categories.ToList();
@@ -53,10 +58,18 @@ namespace ClothingWarehouseManagement_DAL.Repositories
             }
         }
 
-        public void UpdateQuantityProduct(int productId, int quantity)
+        public void UpdateQuantityProductAfterImport(int productId, int quantity)
         {
             var p = _context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
             p.Quantity += quantity;
+            _context.Products.Update(p);
+            _context.SaveChanges();
+        }
+
+        public void UpdateQuantityProductAfterExport(int productId, int quantity)
+        {
+            var p = _context.Products.Where(x => x.ProductId == productId).FirstOrDefault();
+            p.Quantity -= quantity;
             _context.Products.Update(p);
             _context.SaveChanges();
         }

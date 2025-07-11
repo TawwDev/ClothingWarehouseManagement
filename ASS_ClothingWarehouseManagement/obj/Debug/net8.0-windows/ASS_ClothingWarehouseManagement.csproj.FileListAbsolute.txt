@@ -97,5 +97,9 @@ F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagemen
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\CustomerManagement\AddCustomerWindow.baml
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\CustomerManagement\CustomerListPage.baml
 F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\CustomerManagement\UpdateCustomerWindow.baml
-F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ImportManagement\ViewDetailsPage.g.cs
-F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ImportManagement\ViewDetailsPage.baml
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ExportManagement\AddExportWindow.g.cs
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ExportManagement\ViewExportDetailWindow.g.cs
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ImportManagement\ViewImportDetailWindow.g.cs
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ExportManagement\AddExportWindow.baml
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ExportManagement\ViewExportDetailWindow.baml
+F:\FPT_uni\Semester_5_Summer_25\PRN212\Assignment\ASS_ClothingWarehouseManagement\ASS_ClothingWarehouseManagement\obj\Debug\net8.0-windows\view\ImportManagement\ViewImportDetailWindow.baml

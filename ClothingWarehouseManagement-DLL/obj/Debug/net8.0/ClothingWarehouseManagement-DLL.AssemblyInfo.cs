@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClothingWarehouseManagement-DLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96d4d53f06fdd65763936f33b23a22ca129f1b9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18c37f2bb5896ad634fff31bfb93faac3984d7d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClothingWarehouseManagement-DLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClothingWarehouseManagement-DLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
