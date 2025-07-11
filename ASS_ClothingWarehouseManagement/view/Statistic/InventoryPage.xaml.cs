@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ASS_ClothingWarehouseManagement.view
+namespace ASS_ClothingWarehouseManagement.view.Statistic
 {
     /// <summary>
-    /// Interaction logic for StatisticsListPage.xaml
+    /// Interaction logic for InventoryPage.xaml
     /// </summary>
-    public partial class StatisticsListPage : Page
+    public partial class InventoryPage : Page
     {
-        public StatisticsListPage()
+        public InventoryPage()
         {
             InitializeComponent();
         }

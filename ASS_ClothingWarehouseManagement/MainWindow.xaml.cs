@@ -10,6 +10,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ASS_ClothingWarehouseManagement.view;
 using ASS_ClothingWarehouseManagement.view.CustomerManagement;
+using ASS_ClothingWarehouseManagement.view.Statistic;
 using ClothingWarehouseManagement_DAL.Models;
 
 namespace ASS_ClothingWarehouseManagement
@@ -70,7 +71,7 @@ namespace ASS_ClothingWarehouseManagement
         }
         private void btnStatistics_Click(object sender, RoutedEventArgs e)
         {
-            NavigateToPage(new StatisticsListPage());
+            NavigateToPage(new InventoryPage());
         }
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {

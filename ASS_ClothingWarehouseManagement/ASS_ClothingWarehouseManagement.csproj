@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="view\Image\Customer.png" />
+    <None Remove="view\Image\Product.png" />
+    <None Remove="view\Image\Supplier.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ClothingWarehouseManagement-DLL\ClothingWarehouseManagement-DLL.csproj">
       <Private>True</Private>
     </ProjectReference>
@@ -18,6 +24,18 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="view\Image\Customer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="view\Image\Product.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="view\Image\Supplier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
