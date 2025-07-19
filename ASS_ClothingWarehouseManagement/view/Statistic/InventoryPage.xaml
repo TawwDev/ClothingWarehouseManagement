@@ -13,13 +13,17 @@
         <TabControl FontSize="14" BorderThickness="0" Padding="5">
             <TabItem Header="OverView" IsSelected="True">
                 <Grid Margin="5,5,5,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="56*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0" Margin="5,10,5,10">
+                    <Grid Grid.Row="0" Margin="5,10,5,263" Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -90,7 +94,7 @@
                         </Border>
                     </Grid>
 
-                    <Grid Grid.Row="1" Margin="10,0,10,20" VerticalAlignment="Center">
+                    <Grid Margin="10,100,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
@@ -106,8 +110,9 @@
                         <DatePicker x:Name="dpToDateOverView" Grid.Column="3" Margin="5,0,0,0" VerticalAlignment="Center" SelectedDateChanged="dpToDateOverView_SelectedDateChanged"/>
                     </Grid>
 
-                    <DataGrid Grid.Row="2" x:Name="dgSalesReport"
-                              AutoGenerateColumns="False" IsReadOnly="True"
+                    <DataGrid x:Name="dgSalesReport"
+                              AutoGenerateColumns="False" 
+                              CanUserAddRows="False" IsReadOnly="True" Grid.ColumnSpan="2" Margin="0,147,0,0" Grid.RowSpan="3"
                               >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
@@ -131,35 +136,29 @@
                     <Border Grid.Column="0" Background="White" CornerRadius="5" Padding="20" Grid.ColumnSpan="2">
                         <StackPanel>
                             <TextBlock Text="Search Product" FontWeight="SemiBold" Margin="0,0,0,5"/>
-                            <TextBox Padding="5" FontSize="14"/>
+                            <TextBox x:Name="tbSearchInventory" Padding="5" FontSize="14"/>
 
                             <TextBlock Text="From Date" FontWeight="SemiBold" Margin="0,20,0,5"/>
-                            <DatePicker Padding="5" FontSize="14"/>
+                            <DatePicker x:Name="dpFromDateInventory" Padding="5" FontSize="14"/>
 
                             <TextBlock Text="To Date" FontWeight="SemiBold" Margin="0,20,0,5"/>
-                            <DatePicker Padding="5" FontSize="14"/>
+                            <DatePicker x:Name="dpToDateInventory" Padding="5" FontSize="14"/>
 
-                            <Button Content="Refresh" Margin="0, 50, 0, 0"/>
+                            <Button x:Name="btnFilter" Content="Filter" Margin="0, 50, 0, 0" Click="btnFilter_Click"/>
                         </StackPanel>
                     </Border>
 
                     <!-- Bảng dữ liệu bên phải -->
-                    <DataGrid Grid.Column="2" ItemsSource="{Binding InventoryItems}" 
+                    <DataGrid x:Name="dgInventoryReport" Grid.Column="2" ItemsSource="{Binding InventoryItems}" 
                           AutoGenerateColumns="False" IsReadOnly="True"
-                          CanUserAddRows="False"
-                          RowHeaderWidth="0"
-                          GridLinesVisibility="Horizontal"
-                          HorizontalGridLinesBrush="#E0E0E0"
-                          Margin="0,10,10,10"
-                          AlternatingRowBackground="#FAFAFA"
-                          Background="White">
+                          CanUserAddRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Id" Binding="{Binding MaSP}" Width="40"/>
-                            <DataGridTextColumn Header="Product Name" Binding="{Binding TenSanPham}" Width="1*"/>
-                            <DataGridTextColumn Header="Begin Inventory" Binding="{Binding TonDauKy}" Width="1*" />
-                            <DataGridTextColumn Header="In" Binding="{Binding NhapTrongKy}" Width="0.6*" />
-                            <DataGridTextColumn Header="Out" Binding="{Binding XuatTrongKy}" Width="0.6*" />
-                            <DataGridTextColumn Header="End Inventory" Binding="{Binding TonCuoiKy}" Width="1*" />
+                            <DataGridTextColumn Header="Id" Binding="{Binding ProductId}" Width="40"/>
+                            <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}" Width="1*"/>
+                            <DataGridTextColumn Header="Begin Inventory" Binding="{Binding BeginInventory}" Width="1*" />
+                            <DataGridTextColumn Header="In" Binding="{Binding In}" Width="0.6*" />
+                            <DataGridTextColumn Header="Out" Binding="{Binding Out}" Width="0.6*" />
+                            <DataGridTextColumn Header="End Inventory" Binding="{Binding EndInventory}" Width="1*" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

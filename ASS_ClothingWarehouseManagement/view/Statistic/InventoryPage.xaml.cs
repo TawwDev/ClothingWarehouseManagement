@@ -26,6 +26,7 @@ namespace ASS_ClothingWarehouseManagement.view.Statistic
         private SupplierService _supplierService = new();
         private ProductService _productService = new();
         private ExportReceiptService _exportReceiptService = new();
+        private InventoryReportService _inventoryReportService = new();
         public InventoryPage()
         {
             InitializeComponent();
@@ -40,9 +41,6 @@ namespace ASS_ClothingWarehouseManagement.view.Statistic
             tbTotalProduct.Text = _productService.GetListProductAvailbleQuantity().Count.ToString();
 
             dgSalesReport.ItemsSource = _exportReceiptService.GetSalesReport();
-
-
-
         }
 
         private void dpFromDateOverView_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -70,6 +68,18 @@ namespace ASS_ClothingWarehouseManagement.view.Statistic
             }
             dgSalesReport.ItemsSource = null;
             dgSalesReport.ItemsSource = filteredList;
+        }
+        private void btnFilter_Click(object sender, RoutedEventArgs e)
+        {
+            if (!dpFromDateInventory.SelectedDate.HasValue || !dpToDateInventory.SelectedDate.HasValue)
+            {
+                MessageBox.Show("Please select both From Date and To Date.", "Input Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            string searchText = tbSearchInventory.Text.Trim();
+            DateOnly fromDate = DateOnly.FromDateTime(dpFromDateInventory.SelectedDate.Value);
+            DateOnly toDate = DateOnly.FromDateTime(dpToDateInventory.SelectedDate.Value);
+            dgInventoryReport.ItemsSource = _inventoryReportService.InventoryReports(fromDate, toDate, searchText);
         }
     }
 }

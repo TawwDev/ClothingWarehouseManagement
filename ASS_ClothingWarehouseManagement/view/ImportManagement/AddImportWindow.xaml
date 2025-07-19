@@ -108,7 +108,11 @@
                     </Grid>
 
                     <!-- Bottom-Left Section: DataGrid of items to be added -->
-                    <DataGrid Grid.Row="1" Margin="10,0,10,10" AutoGenerateColumns="False" x:Name="dgImportRecreiptDetail" SelectionChanged="dgImportRecreiptDetail_SelectionChanged">
+                    <DataGrid Grid.Row="1" Margin="10,0,10,10" 
+                              CanUserAddRows="False"
+                              AutoGenerateColumns="False" 
+                              x:Name="dgImportRecreiptDetail" 
+                              SelectionChanged="dgImportRecreiptDetail_SelectionChanged">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Product Id" Width="1*" Binding="{Binding Product.ProductId}"/>
                             <DataGridTextColumn Header="Product Name" Width="2*" Binding="{Binding Product.ProductName}"/>
