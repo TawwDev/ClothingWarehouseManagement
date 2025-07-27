@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace ClothingWarehouseManagement_DAL.Models;
 
@@ -35,19 +34,14 @@ public partial class ClothingWarehouseManagementContext : DbContext
     public virtual DbSet<Supplier> Suppliers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseSqlServer(config.GetConnectionString("DB"));
-        }
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("server=(local);database=ClothingWarehouseManagement;uid=sa;pwd=123;TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.UserName).HasName("PK__Account__66DCF95DD5609BCE");
+            entity.HasKey(e => e.UserName).HasName("PK__Account__66DCF95D29368518");
 
             entity.ToTable("Account");
 
@@ -71,11 +65,11 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__23CAF1F8639D1EBA");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__23CAF1F84D081B95");
 
             entity.ToTable("Category");
 
-            entity.HasIndex(e => e.CategoryName, "UQ__Category__37077ABDF6BDD6E2").IsUnique();
+            entity.HasIndex(e => e.CategoryName, "UQ__Category__37077ABDD8005D82").IsUnique();
 
             entity.Property(e => e.CategoryId).HasColumnName("categoryID");
             entity.Property(e => e.CategoryName)
@@ -88,13 +82,13 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__B611CB9D3A0D3B0E");
+            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__B611CB9D51644424");
 
             entity.ToTable("Customer");
 
-            entity.HasIndex(e => e.Email, "UQ__Customer__AB6E6164231D0282").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Customer__AB6E6164AC882EA1").IsUnique();
 
-            entity.HasIndex(e => e.Phone, "UQ__Customer__B43B145F587EC495").IsUnique();
+            entity.HasIndex(e => e.Phone, "UQ__Customer__B43B145F2DD02690").IsUnique();
 
             entity.Property(e => e.CustomerId).HasColumnName("customerID");
             entity.Property(e => e.Address)
@@ -118,7 +112,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<ExportReceipt>(entity =>
         {
-            entity.HasKey(e => e.ReceiptId).HasName("PK__ExportRe__CAA7E898855C48B5");
+            entity.HasKey(e => e.ReceiptId).HasName("PK__ExportRe__CAA7E8986023472A");
 
             entity.ToTable("ExportReceipt");
 
@@ -145,12 +139,13 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<ExportReceiptDetail>(entity =>
         {
-            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ExportRe__7876E58C64437E97");
+            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ExportRe__7876E58CC14B8E82");
 
             entity.ToTable("ExportReceiptDetail");
 
             entity.Property(e => e.ReceiptId).HasColumnName("receiptID");
             entity.Property(e => e.ProductId).HasColumnName("productID");
+            entity.Property(e => e.BasePriceAtExport).HasColumnName("basePriceAtExport");
             entity.Property(e => e.Quantity).HasColumnName("quantity");
             entity.Property(e => e.UnitPrice).HasColumnName("unitPrice");
 
@@ -167,7 +162,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<ImportReceipt>(entity =>
         {
-            entity.HasKey(e => e.ReceiptId).HasName("PK__ImportRe__CAA7E8986422F9A9");
+            entity.HasKey(e => e.ReceiptId).HasName("PK__ImportRe__CAA7E898A3DE34BB");
 
             entity.ToTable("ImportReceipt");
 
@@ -191,7 +186,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<ImportReceiptDetail>(entity =>
         {
-            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ImportRe__7876E58CEF9ADFDD");
+            entity.HasKey(e => new { e.ReceiptId, e.ProductId }).HasName("PK__ImportRe__7876E58C8681BB79");
 
             entity.ToTable("ImportReceiptDetail");
 
@@ -213,7 +208,7 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__2D10D14A542CDE33");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__2D10D14A496E27E9");
 
             entity.ToTable("Product");
 
@@ -241,11 +236,11 @@ public partial class ClothingWarehouseManagementContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__DB8E62CDEA596184");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__DB8E62CD1690D344");
 
             entity.ToTable("Supplier");
 
-            entity.HasIndex(e => e.Email, "UQ__Supplier__AB6E6164F6B690E2").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Supplier__AB6E61648B1C9760").IsUnique();
 
             entity.Property(e => e.SupplierId).HasColumnName("supplierID");
             entity.Property(e => e.Address)

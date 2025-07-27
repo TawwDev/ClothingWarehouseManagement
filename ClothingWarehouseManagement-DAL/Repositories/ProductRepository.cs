@@ -14,7 +14,6 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         
         public Product? GetProductById(int productId)
         {
-            //List: dung Find(productId)
             return _context.Products.FirstOrDefault(p => p.ProductId == productId);
         }
         public List<Product> GetListProduct()
@@ -55,8 +54,11 @@ namespace ClothingWarehouseManagement_DAL.Repositories
         }
         public void DeleteProduct(int productId)
         {
-            var p = _context.Products.FirstOrDefault(p => p.ProductId == productId);
-            if(p != null)
+            var p = _context.Products.Include(p => p.ExportReceiptDetails).Include(p => p.ImportReceiptDetails)
+                .FirstOrDefault(p => p.ProductId == productId);
+            p.ExportReceiptDetails.Clear();
+            p.ImportReceiptDetails.Clear();
+            if (p != null)
             {
                 _context.Remove(p);
                 _context.SaveChanges();

@@ -13,6 +13,8 @@ public partial class ExportReceiptDetail
 
     public double? UnitPrice { get; set; }
 
+    public double? BasePriceAtExport { get; set; }
+
     public virtual Product Product { get; set; } = null!;
 
     public virtual ExportReceipt Receipt { get; set; } = null!;

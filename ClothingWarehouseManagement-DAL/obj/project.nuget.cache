@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "09JBT0TOB8w=",
+  "dgSpecHash": "3WEu4ob65kA=",
   "success": true,
-  "projectFilePath": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ASS_ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj",
+  "projectFilePath": "F:\\FPT_uni\\Semester_5_Summer_25\\PRN212\\Assignment\\ClothingWarehouseManagement\\ClothingWarehouseManagement-DAL\\ClothingWarehouseManagement-DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -80,7 +80,7 @@ namespace ASS_ClothingWarehouseManagement.view.ExportManagement
                             return;
                         }
                     }
-                    exportReceiptDetails.Add(new ExportReceiptDetail { Product = selectedProduct, ProductId = selectedProduct.ProductId, Quantity = quantity, UnitPrice = price });
+                    exportReceiptDetails.Add(new ExportReceiptDetail { Product = selectedProduct, ProductId = selectedProduct.ProductId, Quantity = quantity, UnitPrice = price, BasePriceAtExport = selectedProduct.BasePrice});
                     MessageBox.Show($"Add success export receipt with product id = {selectedProduct.ProductId}!", "Add success!", MessageBoxButton.OK, MessageBoxImage.Information);
                     ClearInfor();
                     double? totalAmount = 0;

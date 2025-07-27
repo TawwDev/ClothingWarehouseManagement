@@ -54,7 +54,7 @@ namespace ClothingWarehouseManagement_DAL.Repositories
                     Date = er.CreatedAt,
                     Capital = 0.0,
                     Revenue = er.TotalAmount,
-                    CostOfGoodsSold = er.ExportReceiptDetails.Sum(d => (d.Quantity ?? 0) * d.Product.BasePrice)
+                    CostOfGoodsSold = er.ExportReceiptDetails.Sum(d => (d.Quantity ?? 0) * (d.BasePriceAtExport ?? 0))
                 });
 
             var reportQuery = capitalData.Concat(salesData)
